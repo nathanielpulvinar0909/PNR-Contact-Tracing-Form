@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PNR Contact Tracing Project/1.0.0": {
+        "runtime": {
+          "PNR Contact Tracing Project.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PNR Contact Tracing Project/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,18 @@
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\bin\Debug\net6.0-windows\PNR Contact Tracing Project.exe
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\bin\Debug\net6.0-windows\PNR Contact Tracing Project.deps.json
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\bin\Debug\net6.0-windows\PNR Contact Tracing Project.runtimeconfig.json
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\bin\Debug\net6.0-windows\PNR Contact Tracing Project.dll
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\bin\Debug\net6.0-windows\PNR Contact Tracing Project.pdb
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR Contact Tracing Project.csproj.AssemblyReference.cache
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR_Contact_Tracing_Project.Form1.resources
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR Contact Tracing Project.csproj.GenerateResource.cache
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR Contact Tracing Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR Contact Tracing Project.AssemblyInfoInputs.cache
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR Contact Tracing Project.AssemblyInfo.cs
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR Contact Tracing Project.csproj.CoreCompileInputs.cache
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR Contact Tracing Project.dll
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\refint\PNR Contact Tracing Project.dll
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR Contact Tracing Project.pdb
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR Contact Tracing Project.genruntimeconfig.cache
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\ref\PNR Contact Tracing Project.dll
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR_Contact_Tracing_Project.Properties.Resources.resources
