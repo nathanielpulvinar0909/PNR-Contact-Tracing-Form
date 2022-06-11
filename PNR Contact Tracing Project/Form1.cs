@@ -111,7 +111,7 @@ namespace PNR_Contact_Tracing_Project
                 eligibility = "Yes. You are eligible to ride this train";
             }
 
-            int temp = int.Parse(txtbxTemperature.Text); // If temperature is greater than 37 Degrees, cannot ride the train
+            float temp = float.Parse(txtbxTemperature.Text); // If temperature is greater than 37 Degrees, cannot ride the train
 
             if (temp > 37)
             {
@@ -151,6 +151,7 @@ namespace PNR_Contact_Tracing_Project
 
             // Travel Information
             file.WriteLine("");
+            file.WriteLine("Travel Information");
             file.WriteLine("Date and Time you ride this train: " + txtbxDateandTime.Text);
             file.WriteLine("Current Location: " + txtbxCurrentlocation.Text);
             file.WriteLine("Desired Destination: " + txtbxDesiredDestination.Text);
@@ -179,6 +180,7 @@ namespace PNR_Contact_Tracing_Project
                 txtbxCurrentlocation.Text = "";
                 txtbxDesiredDestination.Text = "";
                 txtbxDateandTime.Text = "";
+                txtbxTemperature.Text = "";
 
                 // radiobuttons 
                 rdbtnVaccinatedyes.Checked = false;
@@ -197,12 +199,22 @@ namespace PNR_Contact_Tracing_Project
 
         private void btnDateandtime_Click(object sender, EventArgs e) // For Time and Date
         {
-            txtbxDateandTime.Text = dateandtimepicker.Value.ToString();
+          
         }
 
         private void lblPhilippineNationalRailways_Click(object sender, EventArgs e)
         {
-            // Phillipine Nationa Railways Label
+            // Phillipine National Railways Label
+        }
+
+        private void txtbxDateandTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDateandTime_Click_1(object sender, EventArgs e) // For date and time updated
+        {
+            txtbxDateandTime.Text = dateandtimepicker.Value.ToString();
         }
     }
 }
