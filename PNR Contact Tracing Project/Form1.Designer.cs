@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblFirstname = new System.Windows.Forms.Label();
             this.txtbxFirstname = new System.Windows.Forms.TextBox();
@@ -72,21 +71,6 @@
             this.lblCurrentLocation = new System.Windows.Forms.Label();
             this.txtbxCurrentlocation = new System.Windows.Forms.TextBox();
             this.txtbxDesiredDestination = new System.Windows.Forms.TextBox();
-            this.lblDesiredTutuban = new System.Windows.Forms.Label();
-            this.lblDesiredBlumentrit = new System.Windows.Forms.Label();
-            this.lblDesiredLaonLaan = new System.Windows.Forms.Label();
-            this.lblDesiredEspana = new System.Windows.Forms.Label();
-            this.lblDesiredStaMesa = new System.Windows.Forms.Label();
-            this.lblDesiredPandacan = new System.Windows.Forms.Label();
-            this.lblPaco = new System.Windows.Forms.Label();
-            this.lblDesiredSanAndres = new System.Windows.Forms.Label();
-            this.lblDesiredVIitoCruz = new System.Windows.Forms.Label();
-            this.lblDesiredDelaRosa = new System.Windows.Forms.Label();
-            this.lblDesiredPasayRoad = new System.Windows.Forms.Label();
-            this.lblDesiredEDSA = new System.Windows.Forms.Label();
-            this.lblDesiredNichols = new System.Windows.Forms.Label();
-            this.lblDesiredFTI = new System.Windows.Forms.Label();
-            this.lblDesiredBicutan = new System.Windows.Forms.Label();
             this.lblDesireddestination = new System.Windows.Forms.Label();
             this.txtbxDateandTime = new System.Windows.Forms.TextBox();
             this.lblDateandtime = new System.Windows.Forms.Label();
@@ -96,26 +80,46 @@
             this.dateandtimepicker = new System.Windows.Forms.DateTimePicker();
             this.lblCelcius = new System.Windows.Forms.Label();
             this.btnDateandTime = new System.Windows.Forms.Button();
-            this.lblCurrentBIcutan = new System.Windows.Forms.Label();
-            this.lblCurrentFTI = new System.Windows.Forms.Label();
-            this.lblCurrentNichols = new System.Windows.Forms.Label();
-            this.lblCurrentTutuban = new System.Windows.Forms.Label();
-            this.lblCurrentPasayRoad = new System.Windows.Forms.Label();
-            this.lblCurrentDelaRosa = new System.Windows.Forms.Label();
-            this.lblCurrentVitoCruz = new System.Windows.Forms.Label();
-            this.lblCurrentSanAndres = new System.Windows.Forms.Label();
-            this.lblCurrentPaco = new System.Windows.Forms.Label();
-            this.lblCurrentPandacan = new System.Windows.Forms.Label();
-            this.lblCurrentStaMesa = new System.Windows.Forms.Label();
-            this.lblCurrentEspana = new System.Windows.Forms.Label();
-            this.lblCurrentLaonLaan = new System.Windows.Forms.Label();
-            this.lblCurrentBlumentrit = new System.Windows.Forms.Label();
-            this.lblCurrentEDSA = new System.Windows.Forms.Label();
+            this.grpbxCurrentLocation = new System.Windows.Forms.GroupBox();
+            this.rdbtnCurrentTutuban = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentEspana = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentPaco = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentDelaRosa = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentNichols = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentBlumentrit = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentStaMesa = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentSanAndres = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentPasayRoad = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentFTI = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentLaonLaan = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentPandacan = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentVitoCruz = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentEdsa = new System.Windows.Forms.RadioButton();
+            this.rdbtnCurrentBicutan = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbtnDesiredTutuban = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredEspana = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredPaco = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredDelaRosa = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredNichols = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredBlumentrit = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredStaMesa = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredSanAndres = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredPasayRoad = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredFTI = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredLaonLaan = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredPandacan = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredVitoCruz = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredEDSA = new System.Windows.Forms.RadioButton();
+            this.rdbtnDesiredBicutan = new System.Windows.Forms.RadioButton();
+            this.lblTemp = new System.Windows.Forms.Label();
             this.grpbxVaccinated.SuspendLayout();
             this.grpbxDose.SuspendLayout();
             this.grpbxSymptoms.SuspendLayout();
             this.grpbxPersonalcontact.SuspendLayout();
             this.grpbxPositive.SuspendLayout();
+            this.grpbxCurrentLocation.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -316,6 +320,7 @@
             this.rdbtnVaccinatedyes.TabStop = true;
             this.rdbtnVaccinatedyes.Text = "Yes";
             this.rdbtnVaccinatedyes.UseVisualStyleBackColor = true;
+            this.rdbtnVaccinatedyes.CheckedChanged += new System.EventHandler(this.rdbtnVaccinatedyes_CheckedChanged);
             // 
             // rdbtnVaccinatedno
             // 
@@ -328,6 +333,7 @@
             this.rdbtnVaccinatedno.TabStop = true;
             this.rdbtnVaccinatedno.Text = "No";
             this.rdbtnVaccinatedno.UseVisualStyleBackColor = true;
+            this.rdbtnVaccinatedno.CheckedChanged += new System.EventHandler(this.rdbtnVaccinatedno_CheckedChanged);
             // 
             // grpbxVaccinated
             // 
@@ -392,7 +398,6 @@
             // 
             this.grpbxSymptoms.Controls.Add(this.rdbtnSymptomsno);
             this.grpbxSymptoms.Controls.Add(this.rdbtnSymptomsyes);
-            this.grpbxSymptoms.Controls.Add(this.lblSymptoms);
             this.grpbxSymptoms.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.grpbxSymptoms.Location = new System.Drawing.Point(626, 356);
             this.grpbxSymptoms.Name = "grpbxSymptoms";
@@ -428,7 +433,7 @@
             // 
             this.lblSymptoms.AutoSize = true;
             this.lblSymptoms.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSymptoms.Location = new System.Drawing.Point(6, 2);
+            this.lblSymptoms.Location = new System.Drawing.Point(626, 339);
             this.lblSymptoms.Name = "lblSymptoms";
             this.lblSymptoms.Size = new System.Drawing.Size(416, 19);
             this.lblSymptoms.TabIndex = 24;
@@ -553,6 +558,7 @@
             this.txtbxCurrentlocation.Name = "txtbxCurrentlocation";
             this.txtbxCurrentlocation.Size = new System.Drawing.Size(359, 27);
             this.txtbxCurrentlocation.TabIndex = 47;
+            this.txtbxCurrentlocation.Visible = false;
             // 
             // txtbxDesiredDestination
             // 
@@ -561,157 +567,7 @@
             this.txtbxDesiredDestination.Name = "txtbxDesiredDestination";
             this.txtbxDesiredDestination.Size = new System.Drawing.Size(359, 27);
             this.txtbxDesiredDestination.TabIndex = 64;
-            // 
-            // lblDesiredTutuban
-            // 
-            this.lblDesiredTutuban.AutoSize = true;
-            this.lblDesiredTutuban.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredTutuban.Location = new System.Drawing.Point(1573, 457);
-            this.lblDesiredTutuban.Name = "lblDesiredTutuban";
-            this.lblDesiredTutuban.Size = new System.Drawing.Size(69, 19);
-            this.lblDesiredTutuban.TabIndex = 63;
-            this.lblDesiredTutuban.Text = "Tutuban";
-            // 
-            // lblDesiredBlumentrit
-            // 
-            this.lblDesiredBlumentrit.AutoSize = true;
-            this.lblDesiredBlumentrit.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredBlumentrit.Location = new System.Drawing.Point(1389, 457);
-            this.lblDesiredBlumentrit.Name = "lblDesiredBlumentrit";
-            this.lblDesiredBlumentrit.Size = new System.Drawing.Size(82, 19);
-            this.lblDesiredBlumentrit.TabIndex = 62;
-            this.lblDesiredBlumentrit.Text = "Blumentrit";
-            // 
-            // lblDesiredLaonLaan
-            // 
-            this.lblDesiredLaonLaan.AutoSize = true;
-            this.lblDesiredLaonLaan.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredLaonLaan.Location = new System.Drawing.Point(1202, 457);
-            this.lblDesiredLaonLaan.Name = "lblDesiredLaonLaan";
-            this.lblDesiredLaonLaan.Size = new System.Drawing.Size(87, 19);
-            this.lblDesiredLaonLaan.TabIndex = 61;
-            this.lblDesiredLaonLaan.Text = "Laon Laan";
-            // 
-            // lblDesiredEspana
-            // 
-            this.lblDesiredEspana.AutoSize = true;
-            this.lblDesiredEspana.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredEspana.Location = new System.Drawing.Point(1573, 432);
-            this.lblDesiredEspana.Name = "lblDesiredEspana";
-            this.lblDesiredEspana.Size = new System.Drawing.Size(63, 19);
-            this.lblDesiredEspana.TabIndex = 60;
-            this.lblDesiredEspana.Text = "Espana";
-            // 
-            // lblDesiredStaMesa
-            // 
-            this.lblDesiredStaMesa.AutoSize = true;
-            this.lblDesiredStaMesa.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredStaMesa.Location = new System.Drawing.Point(1389, 432);
-            this.lblDesiredStaMesa.Name = "lblDesiredStaMesa";
-            this.lblDesiredStaMesa.Size = new System.Drawing.Size(82, 19);
-            this.lblDesiredStaMesa.TabIndex = 59;
-            this.lblDesiredStaMesa.Text = "Sta. Mesa";
-            // 
-            // lblDesiredPandacan
-            // 
-            this.lblDesiredPandacan.AutoSize = true;
-            this.lblDesiredPandacan.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredPandacan.Location = new System.Drawing.Point(1202, 432);
-            this.lblDesiredPandacan.Name = "lblDesiredPandacan";
-            this.lblDesiredPandacan.Size = new System.Drawing.Size(81, 19);
-            this.lblDesiredPandacan.TabIndex = 58;
-            this.lblDesiredPandacan.Text = "Pandacan";
-            // 
-            // lblPaco
-            // 
-            this.lblPaco.AutoSize = true;
-            this.lblPaco.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPaco.Location = new System.Drawing.Point(1573, 403);
-            this.lblPaco.Name = "lblPaco";
-            this.lblPaco.Size = new System.Drawing.Size(45, 19);
-            this.lblPaco.TabIndex = 57;
-            this.lblPaco.Text = "Paco";
-            // 
-            // lblDesiredSanAndres
-            // 
-            this.lblDesiredSanAndres.AutoSize = true;
-            this.lblDesiredSanAndres.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredSanAndres.Location = new System.Drawing.Point(1389, 403);
-            this.lblDesiredSanAndres.Name = "lblDesiredSanAndres";
-            this.lblDesiredSanAndres.Size = new System.Drawing.Size(94, 19);
-            this.lblDesiredSanAndres.TabIndex = 56;
-            this.lblDesiredSanAndres.Text = "San Andres";
-            this.lblDesiredSanAndres.Click += new System.EventHandler(this.label25_Click);
-            // 
-            // lblDesiredVIitoCruz
-            // 
-            this.lblDesiredVIitoCruz.AutoSize = true;
-            this.lblDesiredVIitoCruz.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredVIitoCruz.Location = new System.Drawing.Point(1202, 403);
-            this.lblDesiredVIitoCruz.Name = "lblDesiredVIitoCruz";
-            this.lblDesiredVIitoCruz.Size = new System.Drawing.Size(76, 19);
-            this.lblDesiredVIitoCruz.TabIndex = 55;
-            this.lblDesiredVIitoCruz.Text = "Vito Cruz";
-            // 
-            // lblDesiredDelaRosa
-            // 
-            this.lblDesiredDelaRosa.AutoSize = true;
-            this.lblDesiredDelaRosa.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredDelaRosa.Location = new System.Drawing.Point(1573, 375);
-            this.lblDesiredDelaRosa.Name = "lblDesiredDelaRosa";
-            this.lblDesiredDelaRosa.Size = new System.Drawing.Size(85, 19);
-            this.lblDesiredDelaRosa.TabIndex = 54;
-            this.lblDesiredDelaRosa.Text = "Dela Rosa";
-            // 
-            // lblDesiredPasayRoad
-            // 
-            this.lblDesiredPasayRoad.AutoSize = true;
-            this.lblDesiredPasayRoad.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredPasayRoad.Location = new System.Drawing.Point(1389, 375);
-            this.lblDesiredPasayRoad.Name = "lblDesiredPasayRoad";
-            this.lblDesiredPasayRoad.Size = new System.Drawing.Size(97, 19);
-            this.lblDesiredPasayRoad.TabIndex = 53;
-            this.lblDesiredPasayRoad.Text = "Pasay Road";
-            // 
-            // lblDesiredEDSA
-            // 
-            this.lblDesiredEDSA.AutoSize = true;
-            this.lblDesiredEDSA.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredEDSA.Location = new System.Drawing.Point(1202, 375);
-            this.lblDesiredEDSA.Name = "lblDesiredEDSA";
-            this.lblDesiredEDSA.Size = new System.Drawing.Size(50, 19);
-            this.lblDesiredEDSA.TabIndex = 52;
-            this.lblDesiredEDSA.Text = "EDSA";
-            // 
-            // lblDesiredNichols
-            // 
-            this.lblDesiredNichols.AutoSize = true;
-            this.lblDesiredNichols.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredNichols.Location = new System.Drawing.Point(1573, 346);
-            this.lblDesiredNichols.Name = "lblDesiredNichols";
-            this.lblDesiredNichols.Size = new System.Drawing.Size(62, 19);
-            this.lblDesiredNichols.TabIndex = 51;
-            this.lblDesiredNichols.Text = "Nichols";
-            // 
-            // lblDesiredFTI
-            // 
-            this.lblDesiredFTI.AutoSize = true;
-            this.lblDesiredFTI.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredFTI.Location = new System.Drawing.Point(1389, 346);
-            this.lblDesiredFTI.Name = "lblDesiredFTI";
-            this.lblDesiredFTI.Size = new System.Drawing.Size(32, 19);
-            this.lblDesiredFTI.TabIndex = 50;
-            this.lblDesiredFTI.Text = "FTI";
-            // 
-            // lblDesiredBicutan
-            // 
-            this.lblDesiredBicutan.AutoSize = true;
-            this.lblDesiredBicutan.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesiredBicutan.Location = new System.Drawing.Point(1202, 346);
-            this.lblDesiredBicutan.Name = "lblDesiredBicutan";
-            this.lblDesiredBicutan.Size = new System.Drawing.Size(63, 19);
-            this.lblDesiredBicutan.TabIndex = 49;
-            this.lblDesiredBicutan.Text = "Bicutan";
+            this.txtbxDesiredDestination.Visible = false;
             // 
             // lblDesireddestination
             // 
@@ -726,7 +582,7 @@
             // txtbxDateandTime
             // 
             this.txtbxDateandTime.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxDateandTime.Location = new System.Drawing.Point(1340, 512);
+            this.txtbxDateandTime.Location = new System.Drawing.Point(1340, 530);
             this.txtbxDateandTime.Name = "txtbxDateandTime";
             this.txtbxDateandTime.Size = new System.Drawing.Size(254, 27);
             this.txtbxDateandTime.TabIndex = 66;
@@ -736,7 +592,7 @@
             // 
             this.lblDateandtime.AutoSize = true;
             this.lblDateandtime.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDateandtime.Location = new System.Drawing.Point(1161, 515);
+            this.lblDateandtime.Location = new System.Drawing.Point(1161, 537);
             this.lblDateandtime.Name = "lblDateandtime";
             this.lblDateandtime.Size = new System.Drawing.Size(121, 19);
             this.lblDateandtime.TabIndex = 65;
@@ -751,6 +607,7 @@
             this.lblPNR.Size = new System.Drawing.Size(291, 119);
             this.lblPNR.TabIndex = 68;
             this.lblPNR.Text = "PNR";
+            this.lblPNR.Click += new System.EventHandler(this.lblPNR_Click);
             // 
             // lblPhilippineNationalRailways
             // 
@@ -776,7 +633,7 @@
             // dateandtimepicker
             // 
             this.dateandtimepicker.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateandtimepicker.Location = new System.Drawing.Point(1340, 509);
+            this.dateandtimepicker.Location = new System.Drawing.Point(1340, 529);
             this.dateandtimepicker.Name = "dateandtimepicker";
             this.dateandtimepicker.Size = new System.Drawing.Size(254, 27);
             this.dateandtimepicker.TabIndex = 71;
@@ -796,7 +653,7 @@
             // 
             // btnDateandTime
             // 
-            this.btnDateandTime.Location = new System.Drawing.Point(1600, 501);
+            this.btnDateandTime.Location = new System.Drawing.Point(1600, 518);
             this.btnDateandTime.Name = "btnDateandTime";
             this.btnDateandTime.Size = new System.Drawing.Size(98, 56);
             this.btnDateandTime.TabIndex = 73;
@@ -804,163 +661,416 @@
             this.btnDateandTime.UseVisualStyleBackColor = true;
             this.btnDateandTime.Click += new System.EventHandler(this.btnDateandTime_Click_1);
             // 
-            // lblCurrentBIcutan
+            // grpbxCurrentLocation
             // 
-            this.lblCurrentBIcutan.AutoSize = true;
-            this.lblCurrentBIcutan.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentBIcutan.Location = new System.Drawing.Point(1202, 134);
-            this.lblCurrentBIcutan.Name = "lblCurrentBIcutan";
-            this.lblCurrentBIcutan.Size = new System.Drawing.Size(63, 19);
-            this.lblCurrentBIcutan.TabIndex = 32;
-            this.lblCurrentBIcutan.Text = "Bicutan";
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentTutuban);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentEspana);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentPaco);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentDelaRosa);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentNichols);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentBlumentrit);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentStaMesa);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentSanAndres);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentPasayRoad);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentFTI);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentLaonLaan);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentPandacan);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentVitoCruz);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentEdsa);
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentBicutan);
+            this.grpbxCurrentLocation.Location = new System.Drawing.Point(1166, 119);
+            this.grpbxCurrentLocation.Name = "grpbxCurrentLocation";
+            this.grpbxCurrentLocation.Size = new System.Drawing.Size(532, 173);
+            this.grpbxCurrentLocation.TabIndex = 74;
+            this.grpbxCurrentLocation.TabStop = false;
+            this.grpbxCurrentLocation.Enter += new System.EventHandler(this.grpbxCurrentLocation_Enter);
             // 
-            // lblCurrentFTI
+            // rdbtnCurrentTutuban
             // 
-            this.lblCurrentFTI.AutoSize = true;
-            this.lblCurrentFTI.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentFTI.Location = new System.Drawing.Point(1389, 134);
-            this.lblCurrentFTI.Name = "lblCurrentFTI";
-            this.lblCurrentFTI.Size = new System.Drawing.Size(32, 19);
-            this.lblCurrentFTI.TabIndex = 33;
-            this.lblCurrentFTI.Text = "FTI";
+            this.rdbtnCurrentTutuban.AutoSize = true;
+            this.rdbtnCurrentTutuban.Location = new System.Drawing.Point(364, 107);
+            this.rdbtnCurrentTutuban.Name = "rdbtnCurrentTutuban";
+            this.rdbtnCurrentTutuban.Size = new System.Drawing.Size(85, 25);
+            this.rdbtnCurrentTutuban.TabIndex = 14;
+            this.rdbtnCurrentTutuban.TabStop = true;
+            this.rdbtnCurrentTutuban.Text = "Tutuban";
+            this.rdbtnCurrentTutuban.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentTutuban.CheckedChanged += new System.EventHandler(this.rdbtnCurrentTutuban_CheckedChanged);
             // 
-            // lblCurrentNichols
+            // rdbtnCurrentEspana
             // 
-            this.lblCurrentNichols.AutoSize = true;
-            this.lblCurrentNichols.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentNichols.Location = new System.Drawing.Point(1573, 134);
-            this.lblCurrentNichols.Name = "lblCurrentNichols";
-            this.lblCurrentNichols.Size = new System.Drawing.Size(62, 19);
-            this.lblCurrentNichols.TabIndex = 34;
-            this.lblCurrentNichols.Text = "Nichols";
+            this.rdbtnCurrentEspana.AutoSize = true;
+            this.rdbtnCurrentEspana.Location = new System.Drawing.Point(364, 84);
+            this.rdbtnCurrentEspana.Name = "rdbtnCurrentEspana";
+            this.rdbtnCurrentEspana.Size = new System.Drawing.Size(77, 25);
+            this.rdbtnCurrentEspana.TabIndex = 13;
+            this.rdbtnCurrentEspana.TabStop = true;
+            this.rdbtnCurrentEspana.Text = "Espana";
+            this.rdbtnCurrentEspana.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentEspana.CheckedChanged += new System.EventHandler(this.rdbtnCurrentEspana_CheckedChanged);
             // 
-            // lblCurrentTutuban
+            // rdbtnCurrentPaco
             // 
-            this.lblCurrentTutuban.AutoSize = true;
-            this.lblCurrentTutuban.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentTutuban.Location = new System.Drawing.Point(1573, 245);
-            this.lblCurrentTutuban.Name = "lblCurrentTutuban";
-            this.lblCurrentTutuban.Size = new System.Drawing.Size(69, 19);
-            this.lblCurrentTutuban.TabIndex = 46;
-            this.lblCurrentTutuban.Text = "Tutuban";
+            this.rdbtnCurrentPaco.AutoSize = true;
+            this.rdbtnCurrentPaco.Location = new System.Drawing.Point(364, 61);
+            this.rdbtnCurrentPaco.Name = "rdbtnCurrentPaco";
+            this.rdbtnCurrentPaco.Size = new System.Drawing.Size(60, 25);
+            this.rdbtnCurrentPaco.TabIndex = 12;
+            this.rdbtnCurrentPaco.TabStop = true;
+            this.rdbtnCurrentPaco.Text = "Paco";
+            this.rdbtnCurrentPaco.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentPaco.CheckedChanged += new System.EventHandler(this.rdbtnCurrentPaco_CheckedChanged);
             // 
-            // lblCurrentPasayRoad
+            // rdbtnCurrentDelaRosa
             // 
-            this.lblCurrentPasayRoad.AutoSize = true;
-            this.lblCurrentPasayRoad.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentPasayRoad.Location = new System.Drawing.Point(1389, 163);
-            this.lblCurrentPasayRoad.Name = "lblCurrentPasayRoad";
-            this.lblCurrentPasayRoad.Size = new System.Drawing.Size(97, 19);
-            this.lblCurrentPasayRoad.TabIndex = 36;
-            this.lblCurrentPasayRoad.Text = "Pasay Road";
+            this.rdbtnCurrentDelaRosa.AutoSize = true;
+            this.rdbtnCurrentDelaRosa.Location = new System.Drawing.Point(364, 39);
+            this.rdbtnCurrentDelaRosa.Name = "rdbtnCurrentDelaRosa";
+            this.rdbtnCurrentDelaRosa.Size = new System.Drawing.Size(97, 25);
+            this.rdbtnCurrentDelaRosa.TabIndex = 11;
+            this.rdbtnCurrentDelaRosa.TabStop = true;
+            this.rdbtnCurrentDelaRosa.Text = "Dela Rosa";
+            this.rdbtnCurrentDelaRosa.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentDelaRosa.CheckedChanged += new System.EventHandler(this.rdbtnCurrentDelaRosa_CheckedChanged);
             // 
-            // lblCurrentDelaRosa
+            // rdbtnCurrentNichols
             // 
-            this.lblCurrentDelaRosa.AutoSize = true;
-            this.lblCurrentDelaRosa.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentDelaRosa.Location = new System.Drawing.Point(1573, 163);
-            this.lblCurrentDelaRosa.Name = "lblCurrentDelaRosa";
-            this.lblCurrentDelaRosa.Size = new System.Drawing.Size(85, 19);
-            this.lblCurrentDelaRosa.TabIndex = 37;
-            this.lblCurrentDelaRosa.Text = "Dela Rosa";
+            this.rdbtnCurrentNichols.AutoSize = true;
+            this.rdbtnCurrentNichols.Location = new System.Drawing.Point(364, 17);
+            this.rdbtnCurrentNichols.Name = "rdbtnCurrentNichols";
+            this.rdbtnCurrentNichols.Size = new System.Drawing.Size(80, 25);
+            this.rdbtnCurrentNichols.TabIndex = 10;
+            this.rdbtnCurrentNichols.TabStop = true;
+            this.rdbtnCurrentNichols.Text = "Nichols";
+            this.rdbtnCurrentNichols.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentNichols.CheckedChanged += new System.EventHandler(this.rdbtnCurrentNichols_CheckedChanged);
             // 
-            // lblCurrentVitoCruz
+            // rdbtnCurrentBlumentrit
             // 
-            this.lblCurrentVitoCruz.AutoSize = true;
-            this.lblCurrentVitoCruz.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentVitoCruz.Location = new System.Drawing.Point(1202, 191);
-            this.lblCurrentVitoCruz.Name = "lblCurrentVitoCruz";
-            this.lblCurrentVitoCruz.Size = new System.Drawing.Size(76, 19);
-            this.lblCurrentVitoCruz.TabIndex = 38;
-            this.lblCurrentVitoCruz.Text = "Vito Cruz";
+            this.rdbtnCurrentBlumentrit.AutoSize = true;
+            this.rdbtnCurrentBlumentrit.Location = new System.Drawing.Point(201, 107);
+            this.rdbtnCurrentBlumentrit.Name = "rdbtnCurrentBlumentrit";
+            this.rdbtnCurrentBlumentrit.Size = new System.Drawing.Size(109, 25);
+            this.rdbtnCurrentBlumentrit.TabIndex = 9;
+            this.rdbtnCurrentBlumentrit.TabStop = true;
+            this.rdbtnCurrentBlumentrit.Text = "Bluementrit";
+            this.rdbtnCurrentBlumentrit.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentBlumentrit.CheckedChanged += new System.EventHandler(this.rdbtnCurrentBlumentrit_CheckedChanged);
             // 
-            // lblCurrentSanAndres
+            // rdbtnCurrentStaMesa
             // 
-            this.lblCurrentSanAndres.AutoSize = true;
-            this.lblCurrentSanAndres.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentSanAndres.Location = new System.Drawing.Point(1389, 191);
-            this.lblCurrentSanAndres.Name = "lblCurrentSanAndres";
-            this.lblCurrentSanAndres.Size = new System.Drawing.Size(94, 19);
-            this.lblCurrentSanAndres.TabIndex = 39;
-            this.lblCurrentSanAndres.Text = "San Andres";
+            this.rdbtnCurrentStaMesa.AutoSize = true;
+            this.rdbtnCurrentStaMesa.Location = new System.Drawing.Point(201, 84);
+            this.rdbtnCurrentStaMesa.Name = "rdbtnCurrentStaMesa";
+            this.rdbtnCurrentStaMesa.Size = new System.Drawing.Size(93, 25);
+            this.rdbtnCurrentStaMesa.TabIndex = 8;
+            this.rdbtnCurrentStaMesa.TabStop = true;
+            this.rdbtnCurrentStaMesa.Text = "Sta. Mesa";
+            this.rdbtnCurrentStaMesa.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentStaMesa.CheckedChanged += new System.EventHandler(this.rdbtnCurrentStaMesa_CheckedChanged);
             // 
-            // lblCurrentPaco
+            // rdbtnCurrentSanAndres
             // 
-            this.lblCurrentPaco.AutoSize = true;
-            this.lblCurrentPaco.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentPaco.Location = new System.Drawing.Point(1573, 191);
-            this.lblCurrentPaco.Name = "lblCurrentPaco";
-            this.lblCurrentPaco.Size = new System.Drawing.Size(45, 19);
-            this.lblCurrentPaco.TabIndex = 40;
-            this.lblCurrentPaco.Text = "Paco";
+            this.rdbtnCurrentSanAndres.AutoSize = true;
+            this.rdbtnCurrentSanAndres.Location = new System.Drawing.Point(201, 61);
+            this.rdbtnCurrentSanAndres.Name = "rdbtnCurrentSanAndres";
+            this.rdbtnCurrentSanAndres.Size = new System.Drawing.Size(107, 25);
+            this.rdbtnCurrentSanAndres.TabIndex = 7;
+            this.rdbtnCurrentSanAndres.TabStop = true;
+            this.rdbtnCurrentSanAndres.Text = "San Andres";
+            this.rdbtnCurrentSanAndres.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentSanAndres.CheckedChanged += new System.EventHandler(this.rdbtnCurrentSanAndres_CheckedChanged);
             // 
-            // lblCurrentPandacan
+            // rdbtnCurrentPasayRoad
             // 
-            this.lblCurrentPandacan.AutoSize = true;
-            this.lblCurrentPandacan.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentPandacan.Location = new System.Drawing.Point(1202, 220);
-            this.lblCurrentPandacan.Name = "lblCurrentPandacan";
-            this.lblCurrentPandacan.Size = new System.Drawing.Size(81, 19);
-            this.lblCurrentPandacan.TabIndex = 41;
-            this.lblCurrentPandacan.Text = "Pandacan";
+            this.rdbtnCurrentPasayRoad.AutoSize = true;
+            this.rdbtnCurrentPasayRoad.Location = new System.Drawing.Point(201, 39);
+            this.rdbtnCurrentPasayRoad.Name = "rdbtnCurrentPasayRoad";
+            this.rdbtnCurrentPasayRoad.Size = new System.Drawing.Size(107, 25);
+            this.rdbtnCurrentPasayRoad.TabIndex = 6;
+            this.rdbtnCurrentPasayRoad.TabStop = true;
+            this.rdbtnCurrentPasayRoad.Text = "Pasay Road";
+            this.rdbtnCurrentPasayRoad.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentPasayRoad.CheckedChanged += new System.EventHandler(this.rdbtnCurrentPasayRoad_CheckedChanged);
             // 
-            // lblCurrentStaMesa
+            // rdbtnCurrentFTI
             // 
-            this.lblCurrentStaMesa.AutoSize = true;
-            this.lblCurrentStaMesa.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentStaMesa.Location = new System.Drawing.Point(1389, 220);
-            this.lblCurrentStaMesa.Name = "lblCurrentStaMesa";
-            this.lblCurrentStaMesa.Size = new System.Drawing.Size(82, 19);
-            this.lblCurrentStaMesa.TabIndex = 42;
-            this.lblCurrentStaMesa.Text = "Sta. Mesa";
+            this.rdbtnCurrentFTI.AutoSize = true;
+            this.rdbtnCurrentFTI.Location = new System.Drawing.Point(201, 17);
+            this.rdbtnCurrentFTI.Name = "rdbtnCurrentFTI";
+            this.rdbtnCurrentFTI.Size = new System.Drawing.Size(48, 25);
+            this.rdbtnCurrentFTI.TabIndex = 5;
+            this.rdbtnCurrentFTI.TabStop = true;
+            this.rdbtnCurrentFTI.Text = "FTI";
+            this.rdbtnCurrentFTI.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentFTI.CheckedChanged += new System.EventHandler(this.rdbtnCurrentFTI_CheckedChanged);
             // 
-            // lblCurrentEspana
+            // rdbtnCurrentLaonLaan
             // 
-            this.lblCurrentEspana.AutoSize = true;
-            this.lblCurrentEspana.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentEspana.Location = new System.Drawing.Point(1573, 220);
-            this.lblCurrentEspana.Name = "lblCurrentEspana";
-            this.lblCurrentEspana.Size = new System.Drawing.Size(63, 19);
-            this.lblCurrentEspana.TabIndex = 43;
-            this.lblCurrentEspana.Text = "Espana";
-            this.lblCurrentEspana.Click += new System.EventHandler(this.lblCurrentEspana_Click);
+            this.rdbtnCurrentLaonLaan.AutoSize = true;
+            this.rdbtnCurrentLaonLaan.Location = new System.Drawing.Point(17, 107);
+            this.rdbtnCurrentLaonLaan.Name = "rdbtnCurrentLaonLaan";
+            this.rdbtnCurrentLaonLaan.Size = new System.Drawing.Size(99, 25);
+            this.rdbtnCurrentLaonLaan.TabIndex = 4;
+            this.rdbtnCurrentLaonLaan.TabStop = true;
+            this.rdbtnCurrentLaonLaan.Text = "Laon Laan";
+            this.rdbtnCurrentLaonLaan.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentLaonLaan.CheckedChanged += new System.EventHandler(this.rdbtnCurrentLaonLaan_CheckedChanged);
             // 
-            // lblCurrentLaonLaan
+            // rdbtnCurrentPandacan
             // 
-            this.lblCurrentLaonLaan.AutoSize = true;
-            this.lblCurrentLaonLaan.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentLaonLaan.Location = new System.Drawing.Point(1202, 245);
-            this.lblCurrentLaonLaan.Name = "lblCurrentLaonLaan";
-            this.lblCurrentLaonLaan.Size = new System.Drawing.Size(87, 19);
-            this.lblCurrentLaonLaan.TabIndex = 44;
-            this.lblCurrentLaonLaan.Text = "Laon Laan";
+            this.rdbtnCurrentPandacan.AutoSize = true;
+            this.rdbtnCurrentPandacan.Location = new System.Drawing.Point(17, 84);
+            this.rdbtnCurrentPandacan.Name = "rdbtnCurrentPandacan";
+            this.rdbtnCurrentPandacan.Size = new System.Drawing.Size(94, 25);
+            this.rdbtnCurrentPandacan.TabIndex = 3;
+            this.rdbtnCurrentPandacan.TabStop = true;
+            this.rdbtnCurrentPandacan.Text = "Pandacan";
+            this.rdbtnCurrentPandacan.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentPandacan.CheckedChanged += new System.EventHandler(this.rdbtnCurrentPandacan_CheckedChanged);
             // 
-            // lblCurrentBlumentrit
+            // rdbtnCurrentVitoCruz
             // 
-            this.lblCurrentBlumentrit.AutoSize = true;
-            this.lblCurrentBlumentrit.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentBlumentrit.Location = new System.Drawing.Point(1389, 245);
-            this.lblCurrentBlumentrit.Name = "lblCurrentBlumentrit";
-            this.lblCurrentBlumentrit.Size = new System.Drawing.Size(82, 19);
-            this.lblCurrentBlumentrit.TabIndex = 45;
-            this.lblCurrentBlumentrit.Text = "Blumentrit";
+            this.rdbtnCurrentVitoCruz.AutoSize = true;
+            this.rdbtnCurrentVitoCruz.Location = new System.Drawing.Point(17, 61);
+            this.rdbtnCurrentVitoCruz.Name = "rdbtnCurrentVitoCruz";
+            this.rdbtnCurrentVitoCruz.Size = new System.Drawing.Size(92, 25);
+            this.rdbtnCurrentVitoCruz.TabIndex = 2;
+            this.rdbtnCurrentVitoCruz.TabStop = true;
+            this.rdbtnCurrentVitoCruz.Text = "Vito Cruz";
+            this.rdbtnCurrentVitoCruz.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentVitoCruz.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // lblCurrentEDSA
+            // rdbtnCurrentEdsa
             // 
-            this.lblCurrentEDSA.AutoSize = true;
-            this.lblCurrentEDSA.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentEDSA.Location = new System.Drawing.Point(1202, 163);
-            this.lblCurrentEDSA.Name = "lblCurrentEDSA";
-            this.lblCurrentEDSA.Size = new System.Drawing.Size(50, 19);
-            this.lblCurrentEDSA.TabIndex = 35;
-            this.lblCurrentEDSA.Text = "EDSA";
+            this.rdbtnCurrentEdsa.AutoSize = true;
+            this.rdbtnCurrentEdsa.Location = new System.Drawing.Point(17, 39);
+            this.rdbtnCurrentEdsa.Name = "rdbtnCurrentEdsa";
+            this.rdbtnCurrentEdsa.Size = new System.Drawing.Size(66, 25);
+            this.rdbtnCurrentEdsa.TabIndex = 1;
+            this.rdbtnCurrentEdsa.TabStop = true;
+            this.rdbtnCurrentEdsa.Text = "EDSA";
+            this.rdbtnCurrentEdsa.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentEdsa.CheckedChanged += new System.EventHandler(this.rdbtnCurrentEdsa_CheckedChanged);
+            // 
+            // rdbtnCurrentBicutan
+            // 
+            this.rdbtnCurrentBicutan.AutoSize = true;
+            this.rdbtnCurrentBicutan.Location = new System.Drawing.Point(17, 17);
+            this.rdbtnCurrentBicutan.Name = "rdbtnCurrentBicutan";
+            this.rdbtnCurrentBicutan.Size = new System.Drawing.Size(79, 25);
+            this.rdbtnCurrentBicutan.TabIndex = 0;
+            this.rdbtnCurrentBicutan.TabStop = true;
+            this.rdbtnCurrentBicutan.Text = "Bicutan";
+            this.rdbtnCurrentBicutan.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentBicutan.CheckedChanged += new System.EventHandler(this.rdbtnCurrentBicutan_CheckedChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbtnDesiredTutuban);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredEspana);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredPaco);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredDelaRosa);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredNichols);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredBlumentrit);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredStaMesa);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredSanAndres);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredPasayRoad);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredFTI);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredLaonLaan);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredPandacan);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredVitoCruz);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredEDSA);
+            this.groupBox1.Controls.Add(this.rdbtnDesiredBicutan);
+            this.groupBox1.Location = new System.Drawing.Point(1166, 339);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(532, 173);
+            this.groupBox1.TabIndex = 75;
+            this.groupBox1.TabStop = false;
+            // 
+            // rdbtnDesiredTutuban
+            // 
+            this.rdbtnDesiredTutuban.AutoSize = true;
+            this.rdbtnDesiredTutuban.Location = new System.Drawing.Point(364, 107);
+            this.rdbtnDesiredTutuban.Name = "rdbtnDesiredTutuban";
+            this.rdbtnDesiredTutuban.Size = new System.Drawing.Size(85, 25);
+            this.rdbtnDesiredTutuban.TabIndex = 14;
+            this.rdbtnDesiredTutuban.TabStop = true;
+            this.rdbtnDesiredTutuban.Text = "Tutuban";
+            this.rdbtnDesiredTutuban.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredEspana
+            // 
+            this.rdbtnDesiredEspana.AutoSize = true;
+            this.rdbtnDesiredEspana.Location = new System.Drawing.Point(364, 84);
+            this.rdbtnDesiredEspana.Name = "rdbtnDesiredEspana";
+            this.rdbtnDesiredEspana.Size = new System.Drawing.Size(77, 25);
+            this.rdbtnDesiredEspana.TabIndex = 13;
+            this.rdbtnDesiredEspana.TabStop = true;
+            this.rdbtnDesiredEspana.Text = "Espana";
+            this.rdbtnDesiredEspana.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredPaco
+            // 
+            this.rdbtnDesiredPaco.AutoSize = true;
+            this.rdbtnDesiredPaco.Location = new System.Drawing.Point(364, 61);
+            this.rdbtnDesiredPaco.Name = "rdbtnDesiredPaco";
+            this.rdbtnDesiredPaco.Size = new System.Drawing.Size(60, 25);
+            this.rdbtnDesiredPaco.TabIndex = 12;
+            this.rdbtnDesiredPaco.TabStop = true;
+            this.rdbtnDesiredPaco.Text = "Paco";
+            this.rdbtnDesiredPaco.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredDelaRosa
+            // 
+            this.rdbtnDesiredDelaRosa.AutoSize = true;
+            this.rdbtnDesiredDelaRosa.Location = new System.Drawing.Point(364, 39);
+            this.rdbtnDesiredDelaRosa.Name = "rdbtnDesiredDelaRosa";
+            this.rdbtnDesiredDelaRosa.Size = new System.Drawing.Size(97, 25);
+            this.rdbtnDesiredDelaRosa.TabIndex = 11;
+            this.rdbtnDesiredDelaRosa.TabStop = true;
+            this.rdbtnDesiredDelaRosa.Text = "Dela Rosa";
+            this.rdbtnDesiredDelaRosa.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredNichols
+            // 
+            this.rdbtnDesiredNichols.AutoSize = true;
+            this.rdbtnDesiredNichols.Location = new System.Drawing.Point(364, 17);
+            this.rdbtnDesiredNichols.Name = "rdbtnDesiredNichols";
+            this.rdbtnDesiredNichols.Size = new System.Drawing.Size(80, 25);
+            this.rdbtnDesiredNichols.TabIndex = 10;
+            this.rdbtnDesiredNichols.TabStop = true;
+            this.rdbtnDesiredNichols.Text = "Nichols";
+            this.rdbtnDesiredNichols.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredBlumentrit
+            // 
+            this.rdbtnDesiredBlumentrit.AutoSize = true;
+            this.rdbtnDesiredBlumentrit.Location = new System.Drawing.Point(201, 107);
+            this.rdbtnDesiredBlumentrit.Name = "rdbtnDesiredBlumentrit";
+            this.rdbtnDesiredBlumentrit.Size = new System.Drawing.Size(109, 25);
+            this.rdbtnDesiredBlumentrit.TabIndex = 9;
+            this.rdbtnDesiredBlumentrit.TabStop = true;
+            this.rdbtnDesiredBlumentrit.Text = "Bluementrit";
+            this.rdbtnDesiredBlumentrit.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredStaMesa
+            // 
+            this.rdbtnDesiredStaMesa.AutoSize = true;
+            this.rdbtnDesiredStaMesa.Location = new System.Drawing.Point(201, 84);
+            this.rdbtnDesiredStaMesa.Name = "rdbtnDesiredStaMesa";
+            this.rdbtnDesiredStaMesa.Size = new System.Drawing.Size(93, 25);
+            this.rdbtnDesiredStaMesa.TabIndex = 8;
+            this.rdbtnDesiredStaMesa.TabStop = true;
+            this.rdbtnDesiredStaMesa.Text = "Sta. Mesa";
+            this.rdbtnDesiredStaMesa.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredSanAndres
+            // 
+            this.rdbtnDesiredSanAndres.AutoSize = true;
+            this.rdbtnDesiredSanAndres.Location = new System.Drawing.Point(201, 61);
+            this.rdbtnDesiredSanAndres.Name = "rdbtnDesiredSanAndres";
+            this.rdbtnDesiredSanAndres.Size = new System.Drawing.Size(107, 25);
+            this.rdbtnDesiredSanAndres.TabIndex = 7;
+            this.rdbtnDesiredSanAndres.TabStop = true;
+            this.rdbtnDesiredSanAndres.Text = "San Andres";
+            this.rdbtnDesiredSanAndres.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredPasayRoad
+            // 
+            this.rdbtnDesiredPasayRoad.AutoSize = true;
+            this.rdbtnDesiredPasayRoad.Location = new System.Drawing.Point(201, 39);
+            this.rdbtnDesiredPasayRoad.Name = "rdbtnDesiredPasayRoad";
+            this.rdbtnDesiredPasayRoad.Size = new System.Drawing.Size(107, 25);
+            this.rdbtnDesiredPasayRoad.TabIndex = 6;
+            this.rdbtnDesiredPasayRoad.TabStop = true;
+            this.rdbtnDesiredPasayRoad.Text = "Pasay Road";
+            this.rdbtnDesiredPasayRoad.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredFTI
+            // 
+            this.rdbtnDesiredFTI.AutoSize = true;
+            this.rdbtnDesiredFTI.Location = new System.Drawing.Point(201, 17);
+            this.rdbtnDesiredFTI.Name = "rdbtnDesiredFTI";
+            this.rdbtnDesiredFTI.Size = new System.Drawing.Size(48, 25);
+            this.rdbtnDesiredFTI.TabIndex = 5;
+            this.rdbtnDesiredFTI.TabStop = true;
+            this.rdbtnDesiredFTI.Text = "FTI";
+            this.rdbtnDesiredFTI.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredLaonLaan
+            // 
+            this.rdbtnDesiredLaonLaan.AutoSize = true;
+            this.rdbtnDesiredLaonLaan.Location = new System.Drawing.Point(17, 107);
+            this.rdbtnDesiredLaonLaan.Name = "rdbtnDesiredLaonLaan";
+            this.rdbtnDesiredLaonLaan.Size = new System.Drawing.Size(99, 25);
+            this.rdbtnDesiredLaonLaan.TabIndex = 4;
+            this.rdbtnDesiredLaonLaan.TabStop = true;
+            this.rdbtnDesiredLaonLaan.Text = "Laon Laan";
+            this.rdbtnDesiredLaonLaan.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredPandacan
+            // 
+            this.rdbtnDesiredPandacan.AutoSize = true;
+            this.rdbtnDesiredPandacan.Location = new System.Drawing.Point(17, 84);
+            this.rdbtnDesiredPandacan.Name = "rdbtnDesiredPandacan";
+            this.rdbtnDesiredPandacan.Size = new System.Drawing.Size(94, 25);
+            this.rdbtnDesiredPandacan.TabIndex = 3;
+            this.rdbtnDesiredPandacan.TabStop = true;
+            this.rdbtnDesiredPandacan.Text = "Pandacan";
+            this.rdbtnDesiredPandacan.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredVitoCruz
+            // 
+            this.rdbtnDesiredVitoCruz.AutoSize = true;
+            this.rdbtnDesiredVitoCruz.Location = new System.Drawing.Point(17, 61);
+            this.rdbtnDesiredVitoCruz.Name = "rdbtnDesiredVitoCruz";
+            this.rdbtnDesiredVitoCruz.Size = new System.Drawing.Size(92, 25);
+            this.rdbtnDesiredVitoCruz.TabIndex = 2;
+            this.rdbtnDesiredVitoCruz.TabStop = true;
+            this.rdbtnDesiredVitoCruz.Text = "Vito Cruz";
+            this.rdbtnDesiredVitoCruz.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredEDSA
+            // 
+            this.rdbtnDesiredEDSA.AutoSize = true;
+            this.rdbtnDesiredEDSA.Location = new System.Drawing.Point(17, 39);
+            this.rdbtnDesiredEDSA.Name = "rdbtnDesiredEDSA";
+            this.rdbtnDesiredEDSA.Size = new System.Drawing.Size(66, 25);
+            this.rdbtnDesiredEDSA.TabIndex = 1;
+            this.rdbtnDesiredEDSA.TabStop = true;
+            this.rdbtnDesiredEDSA.Text = "EDSA";
+            this.rdbtnDesiredEDSA.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDesiredBicutan
+            // 
+            this.rdbtnDesiredBicutan.AutoSize = true;
+            this.rdbtnDesiredBicutan.Location = new System.Drawing.Point(17, 17);
+            this.rdbtnDesiredBicutan.Name = "rdbtnDesiredBicutan";
+            this.rdbtnDesiredBicutan.Size = new System.Drawing.Size(79, 25);
+            this.rdbtnDesiredBicutan.TabIndex = 0;
+            this.rdbtnDesiredBicutan.TabStop = true;
+            this.rdbtnDesiredBicutan.Text = "Bicutan";
+            this.rdbtnDesiredBicutan.UseVisualStyleBackColor = true;
+            // 
+            // lblTemp
+            // 
+            this.lblTemp.AutoSize = true;
+            this.lblTemp.Location = new System.Drawing.Point(717, 125);
+            this.lblTemp.Name = "lblTemp";
+            this.lblTemp.Size = new System.Drawing.Size(191, 21);
+            this.lblTemp.TabIndex = 76;
+            this.lblTemp.Text = "*fill out this using number";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1718, 641);
+            this.Controls.Add(this.lblTemp);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpbxCurrentLocation);
+            this.Controls.Add(this.lblSymptoms);
             this.Controls.Add(this.btnDateandTime);
             this.Controls.Add(this.lblCelcius);
             this.Controls.Add(this.dateandtimepicker);
@@ -971,38 +1081,8 @@
             this.Controls.Add(this.txtbxDateandTime);
             this.Controls.Add(this.lblDateandtime);
             this.Controls.Add(this.txtbxDesiredDestination);
-            this.Controls.Add(this.lblDesiredTutuban);
-            this.Controls.Add(this.lblDesiredBlumentrit);
-            this.Controls.Add(this.lblDesiredLaonLaan);
-            this.Controls.Add(this.lblDesiredEspana);
-            this.Controls.Add(this.lblDesiredStaMesa);
-            this.Controls.Add(this.lblDesiredPandacan);
-            this.Controls.Add(this.lblPaco);
-            this.Controls.Add(this.lblDesiredSanAndres);
-            this.Controls.Add(this.lblDesiredVIitoCruz);
-            this.Controls.Add(this.lblDesiredDelaRosa);
-            this.Controls.Add(this.lblDesiredPasayRoad);
-            this.Controls.Add(this.lblDesiredEDSA);
-            this.Controls.Add(this.lblDesiredNichols);
-            this.Controls.Add(this.lblDesiredFTI);
-            this.Controls.Add(this.lblDesiredBicutan);
             this.Controls.Add(this.lblDesireddestination);
             this.Controls.Add(this.txtbxCurrentlocation);
-            this.Controls.Add(this.lblCurrentTutuban);
-            this.Controls.Add(this.lblCurrentBlumentrit);
-            this.Controls.Add(this.lblCurrentLaonLaan);
-            this.Controls.Add(this.lblCurrentEspana);
-            this.Controls.Add(this.lblCurrentStaMesa);
-            this.Controls.Add(this.lblCurrentPandacan);
-            this.Controls.Add(this.lblCurrentPaco);
-            this.Controls.Add(this.lblCurrentSanAndres);
-            this.Controls.Add(this.lblCurrentVitoCruz);
-            this.Controls.Add(this.lblCurrentDelaRosa);
-            this.Controls.Add(this.lblCurrentPasayRoad);
-            this.Controls.Add(this.lblCurrentEDSA);
-            this.Controls.Add(this.lblCurrentNichols);
-            this.Controls.Add(this.lblCurrentFTI);
-            this.Controls.Add(this.lblCurrentBIcutan);
             this.Controls.Add(this.lblCurrentLocation);
             this.Controls.Add(this.lblTravelinformation);
             this.Controls.Add(this.grpbxPositive);
@@ -1041,6 +1121,10 @@
             this.grpbxPersonalcontact.PerformLayout();
             this.grpbxPositive.ResumeLayout(false);
             this.grpbxPositive.PerformLayout();
+            this.grpbxCurrentLocation.ResumeLayout(false);
+            this.grpbxCurrentLocation.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1091,21 +1175,6 @@
         private Label lblCurrentLocation;
         private TextBox txtbxCurrentlocation;
         private TextBox txtbxDesiredDestination;
-        private Label lblDesiredTutuban;
-        private Label lblDesiredBlumentrit;
-        private Label lblDesiredLaonLaan;
-        private Label lblDesiredEspana;
-        private Label lblDesiredStaMesa;
-        private Label lblDesiredPandacan;
-        private Label lblPaco;
-        private Label lblDesiredSanAndres;
-        private Label lblDesiredVIitoCruz;
-        private Label lblDesiredDelaRosa;
-        private Label lblDesiredPasayRoad;
-        private Label lblDesiredEDSA;
-        private Label lblDesiredNichols;
-        private Label lblDesiredFTI;
-        private Label lblDesiredBicutan;
         private Label lblDesireddestination;
         private TextBox txtbxDateandTime;
         private Label lblDateandtime;
@@ -1115,20 +1184,38 @@
         private DateTimePicker dateandtimepicker;
         private Label lblCelcius;
         private Button btnDateandTime;
-        private Label lblCurrentBIcutan;
-        private Label lblCurrentFTI;
-        private Label lblCurrentNichols;
-        private Label lblCurrentTutuban;
-        private Label lblCurrentPasayRoad;
-        private Label lblCurrentDelaRosa;
-        private Label lblCurrentVitoCruz;
-        private Label lblCurrentSanAndres;
-        private Label lblCurrentPaco;
-        private Label lblCurrentPandacan;
-        private Label lblCurrentStaMesa;
-        private Label lblCurrentEspana;
-        private Label lblCurrentLaonLaan;
-        private Label lblCurrentBlumentrit;
-        private Label lblCurrentEDSA;
+        private GroupBox grpbxCurrentLocation;
+        private RadioButton rdbtnCurrentPandacan;
+        private RadioButton rdbtnCurrentVitoCruz;
+        private RadioButton rdbtnCurrentEdsa;
+        private RadioButton rdbtnCurrentBicutan;
+        private RadioButton rdbtnCurrentBlumentrit;
+        private RadioButton rdbtnCurrentStaMesa;
+        private RadioButton rdbtnCurrentSanAndres;
+        private RadioButton rdbtnCurrentPasayRoad;
+        private RadioButton rdbtnCurrentFTI;
+        private RadioButton rdbtnCurrentLaonLaan;
+        private RadioButton rdbtnCurrentTutuban;
+        private RadioButton rdbtnCurrentEspana;
+        private RadioButton rdbtnCurrentPaco;
+        private RadioButton rdbtnCurrentDelaRosa;
+        private RadioButton rdbtnCurrentNichols;
+        private GroupBox groupBox1;
+        private RadioButton rdbtnDesiredTutuban;
+        private RadioButton rdbtnDesiredEspana;
+        private RadioButton rdbtnDesiredPaco;
+        private RadioButton rdbtnDesiredDelaRosa;
+        private RadioButton rdbtnDesiredNichols;
+        private RadioButton rdbtnDesiredBlumentrit;
+        private RadioButton rdbtnDesiredStaMesa;
+        private RadioButton rdbtnDesiredSanAndres;
+        private RadioButton rdbtnDesiredPasayRoad;
+        private RadioButton rdbtnDesiredFTI;
+        private RadioButton rdbtnDesiredLaonLaan;
+        private RadioButton rdbtnDesiredPandacan;
+        private RadioButton rdbtnDesiredVitoCruz;
+        private RadioButton rdbtnDesiredEDSA;
+        private RadioButton rdbtnDesiredBicutan;
+        private Label lblTemp;
     }
 }
