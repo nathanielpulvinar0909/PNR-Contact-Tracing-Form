@@ -246,53 +246,76 @@ namespace PNR_Contact_Tracing_Project
                     txtbxDesiredDestination.Text = "Tutuban";
                 }
             }
+            
 
-
-            StreamWriter file = new StreamWriter(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt");
+            StreamWriter file = new StreamWriter(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt", true); // appended na siya kaya mauulit
 
             // Introduction
-            file.WriteLine("You, " + txtbxFirstname.Text + " " + txtbxLastName.Text + "," + " answered this Contact tracing form on " + txtbxDateandTime.Text);
+            file.WriteLine("You, " + txtbxFirstname.Text.ToUpper() + " " + txtbxLastName.Text.ToUpper() + "," + " answered this Contact tracing form on " + txtbxDateandTime.Text);
             file.WriteLine("");
 
 
             // Personal Introduction
             file.WriteLine("Personal Information");
             file.WriteLine("Full Name of the Respondent: " + txtbxFirstname.Text + " " + txtbxLastName.Text);
-            file.WriteLine("Address: " + txtbxAddress.Text);
-            file.WriteLine("Age: " + txtbxAge.Text + " years old");
-            file.WriteLine("Sex: " + txtbxSex.Text);
-            file.WriteLine("Mobile Number: " + txtbxMobilenumber.Text);
-            file.WriteLine("Email Address: " + txtbxEmailaddress.Text);
+            file.WriteLine("Address                    : " + txtbxAddress.Text);
+            file.WriteLine("Age                        : " + txtbxAge.Text + " years old");
+            file.WriteLine("Sex                        : " + txtbxSex.Text);
+            file.WriteLine("Mobile Number              : " + txtbxMobilenumber.Text);
+            file.WriteLine("Email Address              : " + txtbxEmailaddress.Text);
 
             // Health Information about Covid
             file.WriteLine("");
             file.WriteLine("Health Information about Covid");
-            file.WriteLine("Temperature: " + txtbxTemperature.Text + " Degrees");
-            file.WriteLine("Vaccinated: " + vaccinated);
-            file.WriteLine("Vaccination Dose: " + dose);
-            file.WriteLine("Had symptoms: " + symptoms);
+            file.WriteLine("Temperature                    : " + txtbxTemperature.Text + " Degrees");
+            file.WriteLine("Vaccinated                     : " + vaccinated);
+            file.WriteLine("Vaccination Dose               : " + dose);
+            file.WriteLine("Had symptoms                   : " + symptoms);
             file.WriteLine("Close contact on covid positive: " + contact);
-            file.WriteLine("Tested positive for Covid 19: " + positive);
-            file.WriteLine("Elligible to travel: " + eligibility);
+            file.WriteLine("Tested positive for Covid 19   : " + positive);
+            file.WriteLine("Elligible to travel            : " + eligibility);
 
             // Travel Information
             file.WriteLine("");
             file.WriteLine("Travel Information");
-            file.WriteLine("Date and Time you ride this train: " + txtbxDateandTime.Text);
-            file.WriteLine("Current Location: " + txtbxCurrentlocation.Text);
-            file.WriteLine("Desired Destination: " + txtbxDesiredDestination.Text);
+            file.WriteLine("Date and Time you ride this train : " + txtbxDateandTime.Text);
+            file.WriteLine("Current Location                  : " + txtbxCurrentlocation.Text);
+            file.WriteLine("Desired Destination               : " + txtbxDesiredDestination.Text);
 
             // CLosing Remarks
             file.WriteLine("");
             file.WriteLine("Thank you for choosing PNR Station!");
 
+            file.WriteLine("");
+            file.WriteLine("**************************");
+            file.WriteLine("");
+
             file.Close();
 
 
             MessageBox.Show("We are pleased to serve you with genuine love and joy. Thank you for choosing PNR Station. Have a safe ride ahead.", "PNR Station");
-            if (MessageBox.Show("Submit another response?", "PNR Station", MessageBoxButtons.RetryCancel) == DialogResult.Cancel)
+            if (MessageBox.Show("Submit another response?, Click 'Cancel' to  read all files", "PNR Station", MessageBoxButtons.RetryCancel) == DialogResult.Cancel)
             {
-                Application.Exit(); //  Exits the program
+
+
+
+                StreamReader file2 = new StreamReader(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt");
+                MessageBox.Show("Here are the following people that went on " + txtbxDateandTime.Text);
+
+                while (!file2.EndOfStream)
+                {
+                    file2.ReadLine();
+
+                    for (int i = 0; i < 10; i++)
+                    {
+                        MessageBox.Show(file2.ReadLine());
+                    }
+                }
+
+                file2.Close();
+
+                
+                //MessageBox.Show(file2.ReadLine());
             }
             else // repeats the process
             {
@@ -323,6 +346,9 @@ namespace PNR_Contact_Tracing_Project
                 rdbtnPositiveno.Checked = false;
                 
             }
+
+
+
         }
 
         private void btnDateandtime_Click(object sender, EventArgs e) // For Time and Date
