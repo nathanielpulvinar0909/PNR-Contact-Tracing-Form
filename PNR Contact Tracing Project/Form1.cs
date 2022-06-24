@@ -251,6 +251,7 @@ namespace PNR_Contact_Tracing_Project
             StreamWriter file = new StreamWriter(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt", true); // appended na siya kaya mauulit
 
             // Introduction
+            file.WriteLine("Summary: " + txtbxFirstname.Text + " " + txtbxLastName.Text + " entered PNR Station on " + txtbxDateandTime.Text + ". He/She lives in " + txtbxAddress.Text + "." + " Arrives from " + txtbxCurrentlocation.Text + " and Arrives To " + txtbxDesiredDestination.Text + ".");
             file.WriteLine("You, " + txtbxFirstname.Text.ToUpper() + " " + txtbxLastName.Text.ToUpper() + "," + " answered this Contact tracing form on " + txtbxDateandTime.Text);
             file.WriteLine("");
 
@@ -292,30 +293,27 @@ namespace PNR_Contact_Tracing_Project
 
             file.Close();
 
+            
 
             MessageBox.Show("We are pleased to serve you with genuine love and joy. Thank you for choosing PNR Station. Have a safe ride ahead.", "PNR Station");
             if (MessageBox.Show("Submit another response?, Click 'Cancel' to  read all files", "PNR Station", MessageBoxButtons.RetryCancel) == DialogResult.Cancel)
             {
-
-
-
-                StreamReader file2 = new StreamReader(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt");
-                MessageBox.Show("Here are the following people that went on " + txtbxDateandTime.Text);
-
-                while (!file2.EndOfStream)
                 {
-                    file2.ReadLine();
-
-                    for (int i = 0; i < 10; i++)
+                    using (StreamReader file2 = new StreamReader(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt"))
                     {
-                        MessageBox.Show(file2.ReadLine());
+                        string person1 = File.ReadLines(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt").ElementAt(0);
+                        string person2 = File.ReadLines(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt").ElementAt(29);
+                        string person3 = File.ReadLines(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt").ElementAt(58);
+                        string person4 = File.ReadLines(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt").ElementAt(87);
+                        string person5 = File.ReadLines(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\Contact Tracing.txt").ElementAt(116);
+
+                        MessageBox.Show(person1);
+                        MessageBox.Show(person2);
+                        MessageBox.Show(person3);
+                        MessageBox.Show(person4);
+                        MessageBox.Show(person5);
                     }
                 }
-
-                file2.Close();
-
-                
-                //MessageBox.Show(file2.ReadLine());
             }
             else // repeats the process
             {
@@ -346,9 +344,6 @@ namespace PNR_Contact_Tracing_Project
                 rdbtnPositiveno.Checked = false;
                 
             }
-
-
-
         }
 
         private void btnDateandtime_Click(object sender, EventArgs e) // For Time and Date
