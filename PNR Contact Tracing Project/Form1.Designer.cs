@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblFirstname = new System.Windows.Forms.Label();
             this.txtbxFirstname = new System.Windows.Forms.TextBox();
@@ -79,7 +80,6 @@
             this.lblContactTracingForm = new System.Windows.Forms.Label();
             this.dateandtimepicker = new System.Windows.Forms.DateTimePicker();
             this.lblCelcius = new System.Windows.Forms.Label();
-            this.btnDateandTime = new System.Windows.Forms.Button();
             this.grpbxCurrentLocation = new System.Windows.Forms.GroupBox();
             this.rdbtnCurrentTutuban = new System.Windows.Forms.RadioButton();
             this.rdbtnCurrentEspana = new System.Windows.Forms.RadioButton();
@@ -113,6 +113,7 @@
             this.rdbtnDesiredEDSA = new System.Windows.Forms.RadioButton();
             this.rdbtnDesiredBicutan = new System.Windows.Forms.RadioButton();
             this.lblTemp = new System.Windows.Forms.Label();
+            this.btnStreamReader = new System.Windows.Forms.Button();
             this.grpbxVaccinated.SuspendLayout();
             this.grpbxDose.SuspendLayout();
             this.grpbxSymptoms.SuspendLayout();
@@ -288,6 +289,7 @@
             this.txtbxTemperature.Name = "txtbxTemperature";
             this.txtbxTemperature.Size = new System.Drawing.Size(137, 27);
             this.txtbxTemperature.TabIndex = 18;
+            this.txtbxTemperature.TextChanged += new System.EventHandler(this.txtbxTemperature_TextChanged);
             // 
             // lblTemperature
             // 
@@ -568,6 +570,7 @@
             this.txtbxDesiredDestination.Size = new System.Drawing.Size(359, 27);
             this.txtbxDesiredDestination.TabIndex = 64;
             this.txtbxDesiredDestination.Visible = false;
+            this.txtbxDesiredDestination.TextChanged += new System.EventHandler(this.txtbxDesiredDestination_TextChanged);
             // 
             // lblDesireddestination
             // 
@@ -633,11 +636,11 @@
             // dateandtimepicker
             // 
             this.dateandtimepicker.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateandtimepicker.Location = new System.Drawing.Point(1340, 529);
+            this.dateandtimepicker.Location = new System.Drawing.Point(1340, 531);
             this.dateandtimepicker.Name = "dateandtimepicker";
-            this.dateandtimepicker.Size = new System.Drawing.Size(254, 27);
+            this.dateandtimepicker.Size = new System.Drawing.Size(250, 27);
             this.dateandtimepicker.TabIndex = 71;
-            this.dateandtimepicker.Visible = false;
+            this.dateandtimepicker.ValueChanged += new System.EventHandler(this.dateandtimepicker_ValueChanged);
             // 
             // lblCelcius
             // 
@@ -650,16 +653,6 @@
             this.lblCelcius.Size = new System.Drawing.Size(26, 18);
             this.lblCelcius.TabIndex = 72;
             this.lblCelcius.Text = "°C";
-            // 
-            // btnDateandTime
-            // 
-            this.btnDateandTime.Location = new System.Drawing.Point(1600, 518);
-            this.btnDateandTime.Name = "btnDateandTime";
-            this.btnDateandTime.Size = new System.Drawing.Size(98, 56);
-            this.btnDateandTime.TabIndex = 73;
-            this.btnDateandTime.Text = "Set Time and Date";
-            this.btnDateandTime.UseVisualStyleBackColor = true;
-            this.btnDateandTime.Click += new System.EventHandler(this.btnDateandTime_Click_1);
             // 
             // grpbxCurrentLocation
             // 
@@ -1062,16 +1055,27 @@
             this.lblTemp.TabIndex = 76;
             this.lblTemp.Text = "*fill out this using number";
             // 
+            // btnStreamReader
+            // 
+            this.btnStreamReader.Location = new System.Drawing.Point(1437, 592);
+            this.btnStreamReader.Name = "btnStreamReader";
+            this.btnStreamReader.Size = new System.Drawing.Size(112, 32);
+            this.btnStreamReader.TabIndex = 77;
+            this.btnStreamReader.Text = "Readline";
+            this.btnStreamReader.UseVisualStyleBackColor = true;
+            this.btnStreamReader.Click += new System.EventHandler(this.btnStreamReader_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1718, 641);
+            this.Controls.Add(this.btnStreamReader);
             this.Controls.Add(this.lblTemp);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpbxCurrentLocation);
             this.Controls.Add(this.lblSymptoms);
-            this.Controls.Add(this.btnDateandTime);
             this.Controls.Add(this.lblCelcius);
             this.Controls.Add(this.dateandtimepicker);
             this.Controls.Add(this.lblContactTracingForm);
@@ -1183,7 +1187,6 @@
         private Label lblContactTracingForm;
         private DateTimePicker dateandtimepicker;
         private Label lblCelcius;
-        private Button btnDateandTime;
         private GroupBox grpbxCurrentLocation;
         private RadioButton rdbtnCurrentPandacan;
         private RadioButton rdbtnCurrentVitoCruz;
@@ -1217,5 +1220,6 @@
         private RadioButton rdbtnDesiredEDSA;
         private RadioButton rdbtnDesiredBicutan;
         private Label lblTemp;
+        private Button btnStreamReader;
     }
 }
