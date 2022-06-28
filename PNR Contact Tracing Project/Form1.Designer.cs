@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblFirstname = new System.Windows.Forms.Label();
             this.txtbxFirstname = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@
             this.rdbtnVaccinatedno = new System.Windows.Forms.RadioButton();
             this.grpbxVaccinated = new System.Windows.Forms.GroupBox();
             this.grpbxDose = new System.Windows.Forms.GroupBox();
+            this.lblYesVaccinatedRespondent = new System.Windows.Forms.Label();
             this.rdbtnSeconddose = new System.Windows.Forms.RadioButton();
             this.rdbtnBooster = new System.Windows.Forms.RadioButton();
             this.rdbtnFirstdose = new System.Windows.Forms.RadioButton();
@@ -76,11 +76,10 @@
             this.txtbxDateandTime = new System.Windows.Forms.TextBox();
             this.lblDateandtime = new System.Windows.Forms.Label();
             this.lblPNR = new System.Windows.Forms.Label();
-            this.lblPhilippineNationalRailways = new System.Windows.Forms.Label();
             this.lblContactTracingForm = new System.Windows.Forms.Label();
-            this.dateandtimepicker = new System.Windows.Forms.DateTimePicker();
             this.lblCelcius = new System.Windows.Forms.Label();
             this.grpbxCurrentLocation = new System.Windows.Forms.GroupBox();
+            this.rdbtnCurrentBicutaan = new System.Windows.Forms.RadioButton();
             this.rdbtnCurrentTutuban = new System.Windows.Forms.RadioButton();
             this.rdbtnCurrentEspana = new System.Windows.Forms.RadioButton();
             this.rdbtnCurrentPaco = new System.Windows.Forms.RadioButton();
@@ -96,7 +95,7 @@
             this.rdbtnCurrentVitoCruz = new System.Windows.Forms.RadioButton();
             this.rdbtnCurrentEdsa = new System.Windows.Forms.RadioButton();
             this.rdbtnCurrentBicutan = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpbxDesired = new System.Windows.Forms.GroupBox();
             this.rdbtnDesiredTutuban = new System.Windows.Forms.RadioButton();
             this.rdbtnDesiredEspana = new System.Windows.Forms.RadioButton();
             this.rdbtnDesiredPaco = new System.Windows.Forms.RadioButton();
@@ -112,22 +111,27 @@
             this.rdbtnDesiredVitoCruz = new System.Windows.Forms.RadioButton();
             this.rdbtnDesiredEDSA = new System.Windows.Forms.RadioButton();
             this.rdbtnDesiredBicutan = new System.Windows.Forms.RadioButton();
-            this.lblTemp = new System.Windows.Forms.Label();
             this.btnStreamReader = new System.Windows.Forms.Button();
+            this.txtbxDateSort = new System.Windows.Forms.TextBox();
+            this.btnSubmitAllFiles = new System.Windows.Forms.Button();
+            this.grpbxFeatures = new System.Windows.Forms.GroupBox();
+            this.lblSortDate = new System.Windows.Forms.Label();
+            this.lblCurrent = new System.Windows.Forms.Label();
             this.grpbxVaccinated.SuspendLayout();
             this.grpbxDose.SuspendLayout();
             this.grpbxSymptoms.SuspendLayout();
             this.grpbxPersonalcontact.SuspendLayout();
             this.grpbxPositive.SuspendLayout();
             this.grpbxCurrentLocation.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grpbxDesired.SuspendLayout();
+            this.grpbxFeatures.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.ForestGreen;
             this.btnSubmit.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSubmit.Location = new System.Drawing.Point(1573, 592);
+            this.btnSubmit.Location = new System.Drawing.Point(1703, 961);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(133, 37);
             this.btnSubmit.TabIndex = 0;
@@ -139,7 +143,7 @@
             // 
             this.lblFirstname.AutoSize = true;
             this.lblFirstname.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFirstname.Location = new System.Drawing.Point(45, 288);
+            this.lblFirstname.Location = new System.Drawing.Point(25, 140);
             this.lblFirstname.Name = "lblFirstname";
             this.lblFirstname.Size = new System.Drawing.Size(93, 19);
             this.lblFirstname.TabIndex = 1;
@@ -148,24 +152,25 @@
             // txtbxFirstname
             // 
             this.txtbxFirstname.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxFirstname.Location = new System.Drawing.Point(45, 312);
+            this.txtbxFirstname.Location = new System.Drawing.Point(179, 132);
             this.txtbxFirstname.Name = "txtbxFirstname";
-            this.txtbxFirstname.Size = new System.Drawing.Size(254, 27);
+            this.txtbxFirstname.Size = new System.Drawing.Size(312, 27);
             this.txtbxFirstname.TabIndex = 2;
+            this.txtbxFirstname.TextChanged += new System.EventHandler(this.txtbxFirstname_TextChanged);
             // 
             // txtbxLastName
             // 
             this.txtbxLastName.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxLastName.Location = new System.Drawing.Point(318, 312);
+            this.txtbxLastName.Location = new System.Drawing.Point(179, 165);
             this.txtbxLastName.Name = "txtbxLastName";
-            this.txtbxLastName.Size = new System.Drawing.Size(254, 27);
+            this.txtbxLastName.Size = new System.Drawing.Size(312, 27);
             this.txtbxLastName.TabIndex = 4;
             // 
             // lblLastname
             // 
             this.lblLastname.AutoSize = true;
             this.lblLastname.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLastname.Location = new System.Drawing.Point(318, 288);
+            this.lblLastname.Location = new System.Drawing.Point(25, 168);
             this.lblLastname.Name = "lblLastname";
             this.lblLastname.Size = new System.Drawing.Size(92, 19);
             this.lblLastname.TabIndex = 3;
@@ -174,16 +179,16 @@
             // txtbxSex
             // 
             this.txtbxSex.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxSex.Location = new System.Drawing.Point(318, 456);
+            this.txtbxSex.Location = new System.Drawing.Point(179, 272);
             this.txtbxSex.Name = "txtbxSex";
-            this.txtbxSex.Size = new System.Drawing.Size(254, 27);
+            this.txtbxSex.Size = new System.Drawing.Size(312, 27);
             this.txtbxSex.TabIndex = 8;
             // 
             // lblSex
             // 
             this.lblSex.AutoSize = true;
             this.lblSex.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSex.Location = new System.Drawing.Point(318, 432);
+            this.lblSex.Location = new System.Drawing.Point(26, 273);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(38, 19);
             this.lblSex.TabIndex = 7;
@@ -192,16 +197,16 @@
             // txtbxAge
             // 
             this.txtbxAge.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxAge.Location = new System.Drawing.Point(45, 456);
+            this.txtbxAge.Location = new System.Drawing.Point(179, 236);
             this.txtbxAge.Name = "txtbxAge";
-            this.txtbxAge.Size = new System.Drawing.Size(254, 27);
+            this.txtbxAge.Size = new System.Drawing.Size(312, 27);
             this.txtbxAge.TabIndex = 6;
             // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAge.Location = new System.Drawing.Point(45, 432);
+            this.lblAge.Location = new System.Drawing.Point(26, 239);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(39, 19);
             this.lblAge.TabIndex = 5;
@@ -210,16 +215,16 @@
             // txtbxEmailaddress
             // 
             this.txtbxEmailaddress.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxEmailaddress.Location = new System.Drawing.Point(318, 533);
+            this.txtbxEmailaddress.Location = new System.Drawing.Point(179, 346);
             this.txtbxEmailaddress.Name = "txtbxEmailaddress";
-            this.txtbxEmailaddress.Size = new System.Drawing.Size(254, 27);
+            this.txtbxEmailaddress.Size = new System.Drawing.Size(312, 27);
             this.txtbxEmailaddress.TabIndex = 12;
             // 
             // lblEmailaddress
             // 
             this.lblEmailaddress.AutoSize = true;
             this.lblEmailaddress.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEmailaddress.Location = new System.Drawing.Point(318, 509);
+            this.lblEmailaddress.Location = new System.Drawing.Point(26, 345);
             this.lblEmailaddress.Name = "lblEmailaddress";
             this.lblEmailaddress.Size = new System.Drawing.Size(120, 19);
             this.lblEmailaddress.TabIndex = 11;
@@ -228,16 +233,16 @@
             // txtbxMobilenumber
             // 
             this.txtbxMobilenumber.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxMobilenumber.Location = new System.Drawing.Point(45, 533);
+            this.txtbxMobilenumber.Location = new System.Drawing.Point(179, 308);
             this.txtbxMobilenumber.Name = "txtbxMobilenumber";
-            this.txtbxMobilenumber.Size = new System.Drawing.Size(254, 27);
+            this.txtbxMobilenumber.Size = new System.Drawing.Size(312, 27);
             this.txtbxMobilenumber.TabIndex = 10;
             // 
             // lblMobilenumber
             // 
             this.lblMobilenumber.AutoSize = true;
             this.lblMobilenumber.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMobilenumber.Location = new System.Drawing.Point(45, 509);
+            this.lblMobilenumber.Location = new System.Drawing.Point(25, 311);
             this.lblMobilenumber.Name = "lblMobilenumber";
             this.lblMobilenumber.Size = new System.Drawing.Size(127, 19);
             this.lblMobilenumber.TabIndex = 9;
@@ -246,16 +251,16 @@
             // txtbxAddress
             // 
             this.txtbxAddress.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxAddress.Location = new System.Drawing.Point(45, 381);
+            this.txtbxAddress.Location = new System.Drawing.Point(179, 202);
             this.txtbxAddress.Name = "txtbxAddress";
-            this.txtbxAddress.Size = new System.Drawing.Size(527, 27);
+            this.txtbxAddress.Size = new System.Drawing.Size(312, 27);
             this.txtbxAddress.TabIndex = 14;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAddress.Location = new System.Drawing.Point(45, 357);
+            this.lblAddress.Location = new System.Drawing.Point(26, 205);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(73, 19);
             this.lblAddress.TabIndex = 13;
@@ -264,8 +269,9 @@
             // lblPersonalInformation
             // 
             this.lblPersonalInformation.AutoSize = true;
+            this.lblPersonalInformation.BackColor = System.Drawing.Color.Transparent;
             this.lblPersonalInformation.Font = new System.Drawing.Font("Calisto MT", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblPersonalInformation.Location = new System.Drawing.Point(12, 242);
+            this.lblPersonalInformation.Location = new System.Drawing.Point(18, 89);
             this.lblPersonalInformation.Name = "lblPersonalInformation";
             this.lblPersonalInformation.Size = new System.Drawing.Size(420, 38);
             this.lblPersonalInformation.TabIndex = 15;
@@ -275,7 +281,7 @@
             // 
             this.lblHealthInformation.AutoSize = true;
             this.lblHealthInformation.Font = new System.Drawing.Font("Calisto MT", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblHealthInformation.Location = new System.Drawing.Point(603, 51);
+            this.lblHealthInformation.Location = new System.Drawing.Point(543, 89);
             this.lblHealthInformation.Name = "lblHealthInformation";
             this.lblHealthInformation.Size = new System.Drawing.Size(387, 38);
             this.lblHealthInformation.TabIndex = 16;
@@ -285,7 +291,7 @@
             // txtbxTemperature
             // 
             this.txtbxTemperature.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxTemperature.Location = new System.Drawing.Point(759, 95);
+            this.txtbxTemperature.Location = new System.Drawing.Point(677, 134);
             this.txtbxTemperature.Name = "txtbxTemperature";
             this.txtbxTemperature.Size = new System.Drawing.Size(137, 27);
             this.txtbxTemperature.TabIndex = 18;
@@ -295,7 +301,7 @@
             // 
             this.lblTemperature.AutoSize = true;
             this.lblTemperature.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTemperature.Location = new System.Drawing.Point(638, 98);
+            this.lblTemperature.Location = new System.Drawing.Point(556, 137);
             this.lblTemperature.Name = "lblTemperature";
             this.lblTemperature.Size = new System.Drawing.Size(105, 19);
             this.lblTemperature.TabIndex = 17;
@@ -305,7 +311,7 @@
             // 
             this.lblVaccinated.AutoSize = true;
             this.lblVaccinated.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblVaccinated.Location = new System.Drawing.Point(12, 0);
+            this.lblVaccinated.Location = new System.Drawing.Point(0, 14);
             this.lblVaccinated.Name = "lblVaccinated";
             this.lblVaccinated.Size = new System.Drawing.Size(167, 19);
             this.lblVaccinated.TabIndex = 19;
@@ -315,7 +321,8 @@
             // 
             this.rdbtnVaccinatedyes.AutoSize = true;
             this.rdbtnVaccinatedyes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbtnVaccinatedyes.Location = new System.Drawing.Point(50, 24);
+            this.rdbtnVaccinatedyes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnVaccinatedyes.Location = new System.Drawing.Point(443, 11);
             this.rdbtnVaccinatedyes.Name = "rdbtnVaccinatedyes";
             this.rdbtnVaccinatedyes.Size = new System.Drawing.Size(55, 22);
             this.rdbtnVaccinatedyes.TabIndex = 20;
@@ -328,7 +335,8 @@
             // 
             this.rdbtnVaccinatedno.AutoSize = true;
             this.rdbtnVaccinatedno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbtnVaccinatedno.Location = new System.Drawing.Point(316, 24);
+            this.rdbtnVaccinatedno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnVaccinatedno.Location = new System.Drawing.Point(531, 11);
             this.rdbtnVaccinatedno.Name = "rdbtnVaccinatedno";
             this.rdbtnVaccinatedno.Size = new System.Drawing.Size(48, 22);
             this.rdbtnVaccinatedno.TabIndex = 21;
@@ -343,30 +351,41 @@
             this.grpbxVaccinated.Controls.Add(this.rdbtnVaccinatedyes);
             this.grpbxVaccinated.Controls.Add(this.lblVaccinated);
             this.grpbxVaccinated.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpbxVaccinated.Location = new System.Drawing.Point(626, 159);
+            this.grpbxVaccinated.Location = new System.Drawing.Point(556, 159);
             this.grpbxVaccinated.Name = "grpbxVaccinated";
-            this.grpbxVaccinated.Size = new System.Drawing.Size(457, 52);
+            this.grpbxVaccinated.Size = new System.Drawing.Size(625, 33);
             this.grpbxVaccinated.TabIndex = 22;
             this.grpbxVaccinated.TabStop = false;
             // 
             // grpbxDose
             // 
             this.grpbxDose.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.grpbxDose.Controls.Add(this.lblYesVaccinatedRespondent);
             this.grpbxDose.Controls.Add(this.rdbtnSeconddose);
             this.grpbxDose.Controls.Add(this.rdbtnBooster);
             this.grpbxDose.Controls.Add(this.rdbtnFirstdose);
             this.grpbxDose.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpbxDose.Location = new System.Drawing.Point(694, 214);
+            this.grpbxDose.Location = new System.Drawing.Point(587, 198);
             this.grpbxDose.Margin = new System.Windows.Forms.Padding(0);
             this.grpbxDose.Name = "grpbxDose";
-            this.grpbxDose.Size = new System.Drawing.Size(202, 115);
+            this.grpbxDose.Size = new System.Drawing.Size(578, 31);
             this.grpbxDose.TabIndex = 23;
             this.grpbxDose.TabStop = false;
+            // 
+            // lblYesVaccinatedRespondent
+            // 
+            this.lblYesVaccinatedRespondent.AutoSize = true;
+            this.lblYesVaccinatedRespondent.Location = new System.Drawing.Point(83, 2);
+            this.lblYesVaccinatedRespondent.Name = "lblYesVaccinatedRespondent";
+            this.lblYesVaccinatedRespondent.Size = new System.Drawing.Size(62, 19);
+            this.lblYesVaccinatedRespondent.TabIndex = 22;
+            this.lblYesVaccinatedRespondent.Text = "If Yes, ";
             // 
             // rdbtnSeconddose
             // 
             this.rdbtnSeconddose.AutoSize = true;
-            this.rdbtnSeconddose.Location = new System.Drawing.Point(23, 59);
+            this.rdbtnSeconddose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnSeconddose.Location = new System.Drawing.Point(326, 0);
             this.rdbtnSeconddose.Name = "rdbtnSeconddose";
             this.rdbtnSeconddose.Size = new System.Drawing.Size(131, 23);
             this.rdbtnSeconddose.TabIndex = 21;
@@ -377,7 +396,8 @@
             // rdbtnBooster
             // 
             this.rdbtnBooster.AutoSize = true;
-            this.rdbtnBooster.Location = new System.Drawing.Point(23, 90);
+            this.rdbtnBooster.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnBooster.Location = new System.Drawing.Point(480, 0);
             this.rdbtnBooster.Name = "rdbtnBooster";
             this.rdbtnBooster.Size = new System.Drawing.Size(89, 23);
             this.rdbtnBooster.TabIndex = 21;
@@ -388,7 +408,8 @@
             // rdbtnFirstdose
             // 
             this.rdbtnFirstdose.AutoSize = true;
-            this.rdbtnFirstdose.Location = new System.Drawing.Point(23, 28);
+            this.rdbtnFirstdose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnFirstdose.Location = new System.Drawing.Point(178, 0);
             this.rdbtnFirstdose.Name = "rdbtnFirstdose";
             this.rdbtnFirstdose.Size = new System.Drawing.Size(107, 23);
             this.rdbtnFirstdose.TabIndex = 20;
@@ -400,10 +421,11 @@
             // 
             this.grpbxSymptoms.Controls.Add(this.rdbtnSymptomsno);
             this.grpbxSymptoms.Controls.Add(this.rdbtnSymptomsyes);
+            this.grpbxSymptoms.Controls.Add(this.lblSymptoms);
             this.grpbxSymptoms.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpbxSymptoms.Location = new System.Drawing.Point(626, 356);
+            this.grpbxSymptoms.Location = new System.Drawing.Point(543, 222);
             this.grpbxSymptoms.Name = "grpbxSymptoms";
-            this.grpbxSymptoms.Size = new System.Drawing.Size(457, 52);
+            this.grpbxSymptoms.Size = new System.Drawing.Size(638, 36);
             this.grpbxSymptoms.TabIndex = 25;
             this.grpbxSymptoms.TabStop = false;
             // 
@@ -411,7 +433,8 @@
             // 
             this.rdbtnSymptomsno.AutoSize = true;
             this.rdbtnSymptomsno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbtnSymptomsno.Location = new System.Drawing.Point(316, 28);
+            this.rdbtnSymptomsno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnSymptomsno.Location = new System.Drawing.Point(544, 10);
             this.rdbtnSymptomsno.Name = "rdbtnSymptomsno";
             this.rdbtnSymptomsno.Size = new System.Drawing.Size(48, 22);
             this.rdbtnSymptomsno.TabIndex = 21;
@@ -423,7 +446,8 @@
             // 
             this.rdbtnSymptomsyes.AutoSize = true;
             this.rdbtnSymptomsyes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbtnSymptomsyes.Location = new System.Drawing.Point(47, 28);
+            this.rdbtnSymptomsyes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnSymptomsyes.Location = new System.Drawing.Point(456, 10);
             this.rdbtnSymptomsyes.Name = "rdbtnSymptomsyes";
             this.rdbtnSymptomsyes.Size = new System.Drawing.Size(55, 22);
             this.rdbtnSymptomsyes.TabIndex = 20;
@@ -435,7 +459,7 @@
             // 
             this.lblSymptoms.AutoSize = true;
             this.lblSymptoms.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSymptoms.Location = new System.Drawing.Point(626, 339);
+            this.lblSymptoms.Location = new System.Drawing.Point(13, 8);
             this.lblSymptoms.Name = "lblSymptoms";
             this.lblSymptoms.Size = new System.Drawing.Size(416, 19);
             this.lblSymptoms.TabIndex = 24;
@@ -447,9 +471,9 @@
             this.grpbxPersonalcontact.Controls.Add(this.rdbtnPersonalcontactyes);
             this.grpbxPersonalcontact.Controls.Add(this.lblPersonalcontact);
             this.grpbxPersonalcontact.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpbxPersonalcontact.Location = new System.Drawing.Point(626, 432);
+            this.grpbxPersonalcontact.Location = new System.Drawing.Point(543, 260);
             this.grpbxPersonalcontact.Name = "grpbxPersonalcontact";
-            this.grpbxPersonalcontact.Size = new System.Drawing.Size(457, 52);
+            this.grpbxPersonalcontact.Size = new System.Drawing.Size(638, 32);
             this.grpbxPersonalcontact.TabIndex = 27;
             this.grpbxPersonalcontact.TabStop = false;
             // 
@@ -457,7 +481,8 @@
             // 
             this.rdbtnPersonalcontactno.AutoSize = true;
             this.rdbtnPersonalcontactno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbtnPersonalcontactno.Location = new System.Drawing.Point(319, 24);
+            this.rdbtnPersonalcontactno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnPersonalcontactno.Location = new System.Drawing.Point(544, 4);
             this.rdbtnPersonalcontactno.Name = "rdbtnPersonalcontactno";
             this.rdbtnPersonalcontactno.Size = new System.Drawing.Size(48, 22);
             this.rdbtnPersonalcontactno.TabIndex = 21;
@@ -469,7 +494,8 @@
             // 
             this.rdbtnPersonalcontactyes.AutoSize = true;
             this.rdbtnPersonalcontactyes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbtnPersonalcontactyes.Location = new System.Drawing.Point(50, 31);
+            this.rdbtnPersonalcontactyes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnPersonalcontactyes.Location = new System.Drawing.Point(456, 4);
             this.rdbtnPersonalcontactyes.Name = "rdbtnPersonalcontactyes";
             this.rdbtnPersonalcontactyes.Size = new System.Drawing.Size(55, 22);
             this.rdbtnPersonalcontactyes.TabIndex = 20;
@@ -481,11 +507,11 @@
             // 
             this.lblPersonalcontact.AutoSize = true;
             this.lblPersonalcontact.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPersonalcontact.Location = new System.Drawing.Point(6, 4);
+            this.lblPersonalcontact.Location = new System.Drawing.Point(13, 6);
             this.lblPersonalcontact.Name = "lblPersonalcontact";
-            this.lblPersonalcontact.Size = new System.Drawing.Size(408, 19);
+            this.lblPersonalcontact.Size = new System.Drawing.Size(422, 19);
             this.lblPersonalcontact.TabIndex = 26;
-            this.lblPersonalcontact.Text = "Had close contact on positive patients 3 days ago?";
+            this.lblPersonalcontact.Text = "Had a close contact on positive patients 3 days ago?";
             // 
             // grpbxPositive
             // 
@@ -493,9 +519,9 @@
             this.grpbxPositive.Controls.Add(this.rdbtnPositiveyes);
             this.grpbxPositive.Controls.Add(this.lblPositive);
             this.grpbxPositive.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpbxPositive.Location = new System.Drawing.Point(626, 509);
+            this.grpbxPositive.Location = new System.Drawing.Point(543, 288);
             this.grpbxPositive.Name = "grpbxPositive";
-            this.grpbxPositive.Size = new System.Drawing.Size(457, 52);
+            this.grpbxPositive.Size = new System.Drawing.Size(638, 42);
             this.grpbxPositive.TabIndex = 29;
             this.grpbxPositive.TabStop = false;
             // 
@@ -503,7 +529,8 @@
             // 
             this.rdbtnPositiveno.AutoSize = true;
             this.rdbtnPositiveno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbtnPositiveno.Location = new System.Drawing.Point(319, 25);
+            this.rdbtnPositiveno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnPositiveno.Location = new System.Drawing.Point(544, 14);
             this.rdbtnPositiveno.Name = "rdbtnPositiveno";
             this.rdbtnPositiveno.Size = new System.Drawing.Size(48, 22);
             this.rdbtnPositiveno.TabIndex = 21;
@@ -515,7 +542,8 @@
             // 
             this.rdbtnPositiveyes.AutoSize = true;
             this.rdbtnPositiveyes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbtnPositiveyes.Location = new System.Drawing.Point(50, 26);
+            this.rdbtnPositiveyes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdbtnPositiveyes.Location = new System.Drawing.Point(456, 13);
             this.rdbtnPositiveyes.Name = "rdbtnPositiveyes";
             this.rdbtnPositiveyes.Size = new System.Drawing.Size(55, 22);
             this.rdbtnPositiveyes.TabIndex = 20;
@@ -527,7 +555,7 @@
             // 
             this.lblPositive.AutoSize = true;
             this.lblPositive.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPositive.Location = new System.Drawing.Point(12, 0);
+            this.lblPositive.Location = new System.Drawing.Point(13, 16);
             this.lblPositive.Name = "lblPositive";
             this.lblPositive.Size = new System.Drawing.Size(370, 19);
             this.lblPositive.TabIndex = 28;
@@ -537,7 +565,7 @@
             // 
             this.lblTravelinformation.AutoSize = true;
             this.lblTravelinformation.Font = new System.Drawing.Font("Calisto MT", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblTravelinformation.Location = new System.Drawing.Point(1089, 51);
+            this.lblTravelinformation.Location = new System.Drawing.Point(18, 376);
             this.lblTravelinformation.Name = "lblTravelinformation";
             this.lblTravelinformation.Size = new System.Drawing.Size(383, 38);
             this.lblTravelinformation.TabIndex = 30;
@@ -547,7 +575,7 @@
             // 
             this.lblCurrentLocation.AutoSize = true;
             this.lblCurrentLocation.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCurrentLocation.Location = new System.Drawing.Point(1161, 93);
+            this.lblCurrentLocation.Location = new System.Drawing.Point(32, 466);
             this.lblCurrentLocation.Name = "lblCurrentLocation";
             this.lblCurrentLocation.Size = new System.Drawing.Size(141, 19);
             this.lblCurrentLocation.TabIndex = 31;
@@ -556,16 +584,17 @@
             // txtbxCurrentlocation
             // 
             this.txtbxCurrentlocation.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxCurrentlocation.Location = new System.Drawing.Point(1340, 90);
+            this.txtbxCurrentlocation.Location = new System.Drawing.Point(179, 433);
             this.txtbxCurrentlocation.Name = "txtbxCurrentlocation";
-            this.txtbxCurrentlocation.Size = new System.Drawing.Size(359, 27);
+            this.txtbxCurrentlocation.Size = new System.Drawing.Size(312, 27);
             this.txtbxCurrentlocation.TabIndex = 47;
             this.txtbxCurrentlocation.Visible = false;
+            this.txtbxCurrentlocation.TextChanged += new System.EventHandler(this.txtbxCurrentlocation_TextChanged);
             // 
             // txtbxDesiredDestination
             // 
             this.txtbxDesiredDestination.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxDesiredDestination.Location = new System.Drawing.Point(1340, 298);
+            this.txtbxDesiredDestination.Location = new System.Drawing.Point(716, 433);
             this.txtbxDesiredDestination.Name = "txtbxDesiredDestination";
             this.txtbxDesiredDestination.Size = new System.Drawing.Size(359, 27);
             this.txtbxDesiredDestination.TabIndex = 64;
@@ -576,7 +605,7 @@
             // 
             this.lblDesireddestination.AutoSize = true;
             this.lblDesireddestination.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDesireddestination.Location = new System.Drawing.Point(1161, 301);
+            this.lblDesireddestination.Location = new System.Drawing.Point(543, 437);
             this.lblDesireddestination.Name = "lblDesireddestination";
             this.lblDesireddestination.Size = new System.Drawing.Size(141, 19);
             this.lblDesireddestination.TabIndex = 48;
@@ -585,9 +614,9 @@
             // txtbxDateandTime
             // 
             this.txtbxDateandTime.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxDateandTime.Location = new System.Drawing.Point(1340, 530);
+            this.txtbxDateandTime.Location = new System.Drawing.Point(730, 630);
             this.txtbxDateandTime.Name = "txtbxDateandTime";
-            this.txtbxDateandTime.Size = new System.Drawing.Size(254, 27);
+            this.txtbxDateandTime.Size = new System.Drawing.Size(346, 27);
             this.txtbxDateandTime.TabIndex = 66;
             this.txtbxDateandTime.TextChanged += new System.EventHandler(this.txtbxDateandTime_TextChanged);
             // 
@@ -595,7 +624,7 @@
             // 
             this.lblDateandtime.AutoSize = true;
             this.lblDateandtime.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDateandtime.Location = new System.Drawing.Point(1161, 537);
+            this.lblDateandtime.Location = new System.Drawing.Point(543, 633);
             this.lblDateandtime.Name = "lblDateandtime";
             this.lblDateandtime.Size = new System.Drawing.Size(121, 19);
             this.lblDateandtime.TabIndex = 65;
@@ -605,42 +634,22 @@
             // 
             this.lblPNR.AutoSize = true;
             this.lblPNR.Font = new System.Drawing.Font("Palace Script MT", 96F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblPNR.Location = new System.Drawing.Point(149, 14);
+            this.lblPNR.Location = new System.Drawing.Point(464, -58);
             this.lblPNR.Name = "lblPNR";
             this.lblPNR.Size = new System.Drawing.Size(291, 119);
             this.lblPNR.TabIndex = 68;
             this.lblPNR.Text = "PNR";
             this.lblPNR.Click += new System.EventHandler(this.lblPNR_Click);
             // 
-            // lblPhilippineNationalRailways
-            // 
-            this.lblPhilippineNationalRailways.AutoSize = true;
-            this.lblPhilippineNationalRailways.Font = new System.Drawing.Font("Segoe MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPhilippineNationalRailways.Location = new System.Drawing.Point(186, 106);
-            this.lblPhilippineNationalRailways.Name = "lblPhilippineNationalRailways";
-            this.lblPhilippineNationalRailways.Size = new System.Drawing.Size(215, 19);
-            this.lblPhilippineNationalRailways.TabIndex = 69;
-            this.lblPhilippineNationalRailways.Text = "Philippine National Railways";
-            this.lblPhilippineNationalRailways.Click += new System.EventHandler(this.lblPhilippineNationalRailways_Click);
-            // 
             // lblContactTracingForm
             // 
             this.lblContactTracingForm.AutoSize = true;
             this.lblContactTracingForm.Font = new System.Drawing.Font("Palace Script MT", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblContactTracingForm.Location = new System.Drawing.Point(12, 125);
+            this.lblContactTracingForm.Location = new System.Drawing.Point(326, 0);
             this.lblContactTracingForm.Name = "lblContactTracingForm";
             this.lblContactTracingForm.Size = new System.Drawing.Size(587, 89);
             this.lblContactTracingForm.TabIndex = 70;
             this.lblContactTracingForm.Text = "Contact Tracing Form";
-            // 
-            // dateandtimepicker
-            // 
-            this.dateandtimepicker.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateandtimepicker.Location = new System.Drawing.Point(1340, 531);
-            this.dateandtimepicker.Name = "dateandtimepicker";
-            this.dateandtimepicker.Size = new System.Drawing.Size(250, 27);
-            this.dateandtimepicker.TabIndex = 71;
-            this.dateandtimepicker.ValueChanged += new System.EventHandler(this.dateandtimepicker_ValueChanged);
             // 
             // lblCelcius
             // 
@@ -648,7 +657,7 @@
             this.lblCelcius.BackColor = System.Drawing.Color.Transparent;
             this.lblCelcius.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblCelcius.ForeColor = System.Drawing.Color.Black;
-            this.lblCelcius.Location = new System.Drawing.Point(866, 99);
+            this.lblCelcius.Location = new System.Drawing.Point(788, 138);
             this.lblCelcius.Name = "lblCelcius";
             this.lblCelcius.Size = new System.Drawing.Size(26, 18);
             this.lblCelcius.TabIndex = 72;
@@ -656,6 +665,7 @@
             // 
             // grpbxCurrentLocation
             // 
+            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentBicutaan);
             this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentTutuban);
             this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentEspana);
             this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentPaco);
@@ -670,13 +680,24 @@
             this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentPandacan);
             this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentVitoCruz);
             this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentEdsa);
-            this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentBicutan);
-            this.grpbxCurrentLocation.Location = new System.Drawing.Point(1166, 119);
+            this.grpbxCurrentLocation.Location = new System.Drawing.Point(26, 466);
             this.grpbxCurrentLocation.Name = "grpbxCurrentLocation";
-            this.grpbxCurrentLocation.Size = new System.Drawing.Size(532, 173);
+            this.grpbxCurrentLocation.Size = new System.Drawing.Size(465, 141);
             this.grpbxCurrentLocation.TabIndex = 74;
             this.grpbxCurrentLocation.TabStop = false;
             this.grpbxCurrentLocation.Enter += new System.EventHandler(this.grpbxCurrentLocation_Enter);
+            // 
+            // rdbtnCurrentBicutaan
+            // 
+            this.rdbtnCurrentBicutaan.AutoSize = true;
+            this.rdbtnCurrentBicutaan.Location = new System.Drawing.Point(17, 17);
+            this.rdbtnCurrentBicutaan.Name = "rdbtnCurrentBicutaan";
+            this.rdbtnCurrentBicutaan.Size = new System.Drawing.Size(79, 25);
+            this.rdbtnCurrentBicutaan.TabIndex = 15;
+            this.rdbtnCurrentBicutaan.TabStop = true;
+            this.rdbtnCurrentBicutaan.Text = "Bicutan";
+            this.rdbtnCurrentBicutaan.UseVisualStyleBackColor = true;
+            this.rdbtnCurrentBicutaan.CheckedChanged += new System.EventHandler(this.rdbtnCurrentBicutaan_CheckedChanged);
             // 
             // rdbtnCurrentTutuban
             // 
@@ -849,7 +870,7 @@
             // rdbtnCurrentBicutan
             // 
             this.rdbtnCurrentBicutan.AutoSize = true;
-            this.rdbtnCurrentBicutan.Location = new System.Drawing.Point(17, 17);
+            this.rdbtnCurrentBicutan.Location = new System.Drawing.Point(-140, -26);
             this.rdbtnCurrentBicutan.Name = "rdbtnCurrentBicutan";
             this.rdbtnCurrentBicutan.Size = new System.Drawing.Size(79, 25);
             this.rdbtnCurrentBicutan.TabIndex = 0;
@@ -858,28 +879,28 @@
             this.rdbtnCurrentBicutan.UseVisualStyleBackColor = true;
             this.rdbtnCurrentBicutan.CheckedChanged += new System.EventHandler(this.rdbtnCurrentBicutan_CheckedChanged);
             // 
-            // groupBox1
+            // grpbxDesired
             // 
-            this.groupBox1.Controls.Add(this.rdbtnDesiredTutuban);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredEspana);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredPaco);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredDelaRosa);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredNichols);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredBlumentrit);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredStaMesa);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredSanAndres);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredPasayRoad);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredFTI);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredLaonLaan);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredPandacan);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredVitoCruz);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredEDSA);
-            this.groupBox1.Controls.Add(this.rdbtnDesiredBicutan);
-            this.groupBox1.Location = new System.Drawing.Point(1166, 339);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(532, 173);
-            this.groupBox1.TabIndex = 75;
-            this.groupBox1.TabStop = false;
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredTutuban);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredEspana);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredPaco);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredDelaRosa);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredNichols);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredBlumentrit);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredStaMesa);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredSanAndres);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredPasayRoad);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredFTI);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredLaonLaan);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredPandacan);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredVitoCruz);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredEDSA);
+            this.grpbxDesired.Controls.Add(this.rdbtnDesiredBicutan);
+            this.grpbxDesired.Location = new System.Drawing.Point(543, 466);
+            this.grpbxDesired.Name = "grpbxDesired";
+            this.grpbxDesired.Size = new System.Drawing.Size(532, 141);
+            this.grpbxDesired.TabIndex = 75;
+            this.grpbxDesired.TabStop = false;
             // 
             // rdbtnDesiredTutuban
             // 
@@ -1046,52 +1067,92 @@
             this.rdbtnDesiredBicutan.Text = "Bicutan";
             this.rdbtnDesiredBicutan.UseVisualStyleBackColor = true;
             // 
-            // lblTemp
-            // 
-            this.lblTemp.AutoSize = true;
-            this.lblTemp.Location = new System.Drawing.Point(717, 125);
-            this.lblTemp.Name = "lblTemp";
-            this.lblTemp.Size = new System.Drawing.Size(191, 21);
-            this.lblTemp.TabIndex = 76;
-            this.lblTemp.Text = "*fill out this using number";
-            // 
             // btnStreamReader
             // 
-            this.btnStreamReader.Location = new System.Drawing.Point(1437, 592);
+            this.btnStreamReader.Location = new System.Drawing.Point(285, 44);
             this.btnStreamReader.Name = "btnStreamReader";
-            this.btnStreamReader.Size = new System.Drawing.Size(112, 32);
+            this.btnStreamReader.Size = new System.Drawing.Size(156, 32);
             this.btnStreamReader.TabIndex = 77;
-            this.btnStreamReader.Text = "Readline";
+            this.btnStreamReader.Text = "Sort Date";
             this.btnStreamReader.UseVisualStyleBackColor = true;
             this.btnStreamReader.Click += new System.EventHandler(this.btnStreamReader_Click);
+            // 
+            // txtbxDateSort
+            // 
+            this.txtbxDateSort.Location = new System.Drawing.Point(41, 47);
+            this.txtbxDateSort.Name = "txtbxDateSort";
+            this.txtbxDateSort.Size = new System.Drawing.Size(238, 29);
+            this.txtbxDateSort.TabIndex = 78;
+            this.txtbxDateSort.TextChanged += new System.EventHandler(this.txtbxDateSort_TextChanged);
+            // 
+            // btnSubmitAllFiles
+            // 
+            this.btnSubmitAllFiles.Location = new System.Drawing.Point(788, 669);
+            this.btnSubmitAllFiles.Name = "btnSubmitAllFiles";
+            this.btnSubmitAllFiles.Size = new System.Drawing.Size(290, 51);
+            this.btnSubmitAllFiles.TabIndex = 81;
+            this.btnSubmitAllFiles.Text = "Submit";
+            this.btnSubmitAllFiles.UseVisualStyleBackColor = true;
+            this.btnSubmitAllFiles.Click += new System.EventHandler(this.btnSubmitAllFiles_Click);
+            // 
+            // grpbxFeatures
+            // 
+            this.grpbxFeatures.Controls.Add(this.lblSortDate);
+            this.grpbxFeatures.Controls.Add(this.btnStreamReader);
+            this.grpbxFeatures.Controls.Add(this.txtbxDateSort);
+            this.grpbxFeatures.Location = new System.Drawing.Point(34, 613);
+            this.grpbxFeatures.Name = "grpbxFeatures";
+            this.grpbxFeatures.Size = new System.Drawing.Size(462, 96);
+            this.grpbxFeatures.TabIndex = 82;
+            this.grpbxFeatures.TabStop = false;
+            this.grpbxFeatures.Text = "Features Included to Sort Date";
+            // 
+            // lblSortDate
+            // 
+            this.lblSortDate.AutoSize = true;
+            this.lblSortDate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSortDate.Location = new System.Drawing.Point(17, 25);
+            this.lblSortDate.Name = "lblSortDate";
+            this.lblSortDate.Size = new System.Drawing.Size(238, 13);
+            this.lblSortDate.TabIndex = 82;
+            this.lblSortDate.Text = "Input Date then click the button to Sort Date";
+            // 
+            // lblCurrent
+            // 
+            this.lblCurrent.AutoSize = true;
+            this.lblCurrent.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCurrent.Location = new System.Drawing.Point(26, 436);
+            this.lblCurrent.Name = "lblCurrent";
+            this.lblCurrent.Size = new System.Drawing.Size(141, 19);
+            this.lblCurrent.TabIndex = 83;
+            this.lblCurrent.Text = "Current Location";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1718, 641);
-            this.Controls.Add(this.btnStreamReader);
-            this.Controls.Add(this.lblTemp);
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1718, 830);
+            this.Controls.Add(this.lblCurrent);
+            this.Controls.Add(this.grpbxFeatures);
+            this.Controls.Add(this.btnSubmitAllFiles);
+            this.Controls.Add(this.grpbxDesired);
+            this.Controls.Add(this.grpbxSymptoms);
             this.Controls.Add(this.grpbxCurrentLocation);
-            this.Controls.Add(this.lblSymptoms);
             this.Controls.Add(this.lblCelcius);
-            this.Controls.Add(this.dateandtimepicker);
             this.Controls.Add(this.lblContactTracingForm);
-            this.Controls.Add(this.lblPhilippineNationalRailways);
             this.Controls.Add(this.grpbxDose);
             this.Controls.Add(this.lblPNR);
             this.Controls.Add(this.txtbxDateandTime);
-            this.Controls.Add(this.lblDateandtime);
-            this.Controls.Add(this.txtbxDesiredDestination);
-            this.Controls.Add(this.lblDesireddestination);
             this.Controls.Add(this.txtbxCurrentlocation);
+            this.Controls.Add(this.lblDateandtime);
             this.Controls.Add(this.lblCurrentLocation);
+            this.Controls.Add(this.rdbtnCurrentBicutan);
+            this.Controls.Add(this.txtbxDesiredDestination);
             this.Controls.Add(this.lblTravelinformation);
             this.Controls.Add(this.grpbxPositive);
+            this.Controls.Add(this.lblDesireddestination);
             this.Controls.Add(this.grpbxPersonalcontact);
-            this.Controls.Add(this.grpbxSymptoms);
             this.Controls.Add(this.grpbxVaccinated);
             this.Controls.Add(this.txtbxTemperature);
             this.Controls.Add(this.lblTemperature);
@@ -1127,8 +1188,10 @@
             this.grpbxPositive.PerformLayout();
             this.grpbxCurrentLocation.ResumeLayout(false);
             this.grpbxCurrentLocation.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpbxDesired.ResumeLayout(false);
+            this.grpbxDesired.PerformLayout();
+            this.grpbxFeatures.ResumeLayout(false);
+            this.grpbxFeatures.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1183,9 +1246,7 @@
         private TextBox txtbxDateandTime;
         private Label lblDateandtime;
         private Label lblPNR;
-        private Label lblPhilippineNationalRailways;
         private Label lblContactTracingForm;
-        private DateTimePicker dateandtimepicker;
         private Label lblCelcius;
         private GroupBox grpbxCurrentLocation;
         private RadioButton rdbtnCurrentPandacan;
@@ -1203,7 +1264,7 @@
         private RadioButton rdbtnCurrentPaco;
         private RadioButton rdbtnCurrentDelaRosa;
         private RadioButton rdbtnCurrentNichols;
-        private GroupBox groupBox1;
+        private GroupBox grpbxDesired;
         private RadioButton rdbtnDesiredTutuban;
         private RadioButton rdbtnDesiredEspana;
         private RadioButton rdbtnDesiredPaco;
@@ -1219,7 +1280,13 @@
         private RadioButton rdbtnDesiredVitoCruz;
         private RadioButton rdbtnDesiredEDSA;
         private RadioButton rdbtnDesiredBicutan;
-        private Label lblTemp;
         private Button btnStreamReader;
+        private TextBox txtbxDateSort;
+        private Label lblYesVaccinatedRespondent;
+        private Button btnSubmitAllFiles;
+        private GroupBox grpbxFeatures;
+        private Label lblSortDate;
+        private Label lblCurrent;
+        private RadioButton rdbtnCurrentBicutaan;
     }
 }
