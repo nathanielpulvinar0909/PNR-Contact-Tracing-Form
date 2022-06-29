@@ -75,7 +75,6 @@
             this.lblDesireddestination = new System.Windows.Forms.Label();
             this.txtbxDateandTime = new System.Windows.Forms.TextBox();
             this.lblDateandtime = new System.Windows.Forms.Label();
-            this.lblPNR = new System.Windows.Forms.Label();
             this.lblContactTracingForm = new System.Windows.Forms.Label();
             this.lblCelcius = new System.Windows.Forms.Label();
             this.grpbxCurrentLocation = new System.Windows.Forms.GroupBox();
@@ -115,8 +114,13 @@
             this.txtbxDateSort = new System.Windows.Forms.TextBox();
             this.btnSubmitAllFiles = new System.Windows.Forms.Button();
             this.grpbxFeatures = new System.Windows.Forms.GroupBox();
+            this.dateSort = new System.Windows.Forms.DateTimePicker();
             this.lblSortDate = new System.Windows.Forms.Label();
             this.lblCurrent = new System.Windows.Forms.Label();
+            this.pctrbxPNR = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.grpbxVaccinated.SuspendLayout();
             this.grpbxDose.SuspendLayout();
             this.grpbxSymptoms.SuspendLayout();
@@ -125,6 +129,8 @@
             this.grpbxCurrentLocation.SuspendLayout();
             this.grpbxDesired.SuspendLayout();
             this.grpbxFeatures.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbxPNR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -142,7 +148,9 @@
             // lblFirstname
             // 
             this.lblFirstname.AutoSize = true;
+            this.lblFirstname.BackColor = System.Drawing.Color.Transparent;
             this.lblFirstname.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFirstname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblFirstname.Location = new System.Drawing.Point(25, 140);
             this.lblFirstname.Name = "lblFirstname";
             this.lblFirstname.Size = new System.Drawing.Size(93, 19);
@@ -151,6 +159,7 @@
             // 
             // txtbxFirstname
             // 
+            this.txtbxFirstname.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxFirstname.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxFirstname.Location = new System.Drawing.Point(179, 132);
             this.txtbxFirstname.Name = "txtbxFirstname";
@@ -160,6 +169,7 @@
             // 
             // txtbxLastName
             // 
+            this.txtbxLastName.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxLastName.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxLastName.Location = new System.Drawing.Point(179, 165);
             this.txtbxLastName.Name = "txtbxLastName";
@@ -169,7 +179,9 @@
             // lblLastname
             // 
             this.lblLastname.AutoSize = true;
+            this.lblLastname.BackColor = System.Drawing.Color.Transparent;
             this.lblLastname.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLastname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblLastname.Location = new System.Drawing.Point(25, 168);
             this.lblLastname.Name = "lblLastname";
             this.lblLastname.Size = new System.Drawing.Size(92, 19);
@@ -178,6 +190,7 @@
             // 
             // txtbxSex
             // 
+            this.txtbxSex.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxSex.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxSex.Location = new System.Drawing.Point(179, 272);
             this.txtbxSex.Name = "txtbxSex";
@@ -187,7 +200,9 @@
             // lblSex
             // 
             this.lblSex.AutoSize = true;
+            this.lblSex.BackColor = System.Drawing.Color.Transparent;
             this.lblSex.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSex.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblSex.Location = new System.Drawing.Point(26, 273);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(38, 19);
@@ -196,6 +211,7 @@
             // 
             // txtbxAge
             // 
+            this.txtbxAge.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxAge.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxAge.Location = new System.Drawing.Point(179, 236);
             this.txtbxAge.Name = "txtbxAge";
@@ -205,7 +221,9 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
+            this.lblAge.BackColor = System.Drawing.Color.Transparent;
             this.lblAge.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAge.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblAge.Location = new System.Drawing.Point(26, 239);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(39, 19);
@@ -214,6 +232,7 @@
             // 
             // txtbxEmailaddress
             // 
+            this.txtbxEmailaddress.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxEmailaddress.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxEmailaddress.Location = new System.Drawing.Point(179, 346);
             this.txtbxEmailaddress.Name = "txtbxEmailaddress";
@@ -223,7 +242,9 @@
             // lblEmailaddress
             // 
             this.lblEmailaddress.AutoSize = true;
+            this.lblEmailaddress.BackColor = System.Drawing.Color.Transparent;
             this.lblEmailaddress.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmailaddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblEmailaddress.Location = new System.Drawing.Point(26, 345);
             this.lblEmailaddress.Name = "lblEmailaddress";
             this.lblEmailaddress.Size = new System.Drawing.Size(120, 19);
@@ -232,6 +253,7 @@
             // 
             // txtbxMobilenumber
             // 
+            this.txtbxMobilenumber.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxMobilenumber.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxMobilenumber.Location = new System.Drawing.Point(179, 308);
             this.txtbxMobilenumber.Name = "txtbxMobilenumber";
@@ -241,7 +263,9 @@
             // lblMobilenumber
             // 
             this.lblMobilenumber.AutoSize = true;
+            this.lblMobilenumber.BackColor = System.Drawing.Color.Transparent;
             this.lblMobilenumber.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMobilenumber.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblMobilenumber.Location = new System.Drawing.Point(25, 311);
             this.lblMobilenumber.Name = "lblMobilenumber";
             this.lblMobilenumber.Size = new System.Drawing.Size(127, 19);
@@ -250,6 +274,7 @@
             // 
             // txtbxAddress
             // 
+            this.txtbxAddress.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxAddress.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxAddress.Location = new System.Drawing.Point(179, 202);
             this.txtbxAddress.Name = "txtbxAddress";
@@ -259,7 +284,9 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
+            this.lblAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblAddress.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblAddress.Location = new System.Drawing.Point(26, 205);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(73, 19);
@@ -291,7 +318,7 @@
             // txtbxTemperature
             // 
             this.txtbxTemperature.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtbxTemperature.Location = new System.Drawing.Point(677, 134);
+            this.txtbxTemperature.Location = new System.Drawing.Point(677, 131);
             this.txtbxTemperature.Name = "txtbxTemperature";
             this.txtbxTemperature.Size = new System.Drawing.Size(137, 27);
             this.txtbxTemperature.TabIndex = 18;
@@ -300,7 +327,9 @@
             // lblTemperature
             // 
             this.lblTemperature.AutoSize = true;
+            this.lblTemperature.BackColor = System.Drawing.Color.Transparent;
             this.lblTemperature.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTemperature.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblTemperature.Location = new System.Drawing.Point(556, 137);
             this.lblTemperature.Name = "lblTemperature";
             this.lblTemperature.Size = new System.Drawing.Size(105, 19);
@@ -347,10 +376,13 @@
             // 
             // grpbxVaccinated
             // 
+            this.grpbxVaccinated.BackColor = System.Drawing.Color.Transparent;
+            this.grpbxVaccinated.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpbxVaccinated.Controls.Add(this.rdbtnVaccinatedno);
             this.grpbxVaccinated.Controls.Add(this.rdbtnVaccinatedyes);
             this.grpbxVaccinated.Controls.Add(this.lblVaccinated);
             this.grpbxVaccinated.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.grpbxVaccinated.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grpbxVaccinated.Location = new System.Drawing.Point(556, 159);
             this.grpbxVaccinated.Name = "grpbxVaccinated";
             this.grpbxVaccinated.Size = new System.Drawing.Size(625, 33);
@@ -359,7 +391,7 @@
             // 
             // grpbxDose
             // 
-            this.grpbxDose.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.grpbxDose.BackColor = System.Drawing.Color.Transparent;
             this.grpbxDose.Controls.Add(this.lblYesVaccinatedRespondent);
             this.grpbxDose.Controls.Add(this.rdbtnSeconddose);
             this.grpbxDose.Controls.Add(this.rdbtnBooster);
@@ -375,6 +407,8 @@
             // lblYesVaccinatedRespondent
             // 
             this.lblYesVaccinatedRespondent.AutoSize = true;
+            this.lblYesVaccinatedRespondent.BackColor = System.Drawing.Color.Transparent;
+            this.lblYesVaccinatedRespondent.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblYesVaccinatedRespondent.Location = new System.Drawing.Point(83, 2);
             this.lblYesVaccinatedRespondent.Name = "lblYesVaccinatedRespondent";
             this.lblYesVaccinatedRespondent.Size = new System.Drawing.Size(62, 19);
@@ -384,6 +418,7 @@
             // rdbtnSeconddose
             // 
             this.rdbtnSeconddose.AutoSize = true;
+            this.rdbtnSeconddose.BackColor = System.Drawing.Color.Transparent;
             this.rdbtnSeconddose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rdbtnSeconddose.Location = new System.Drawing.Point(326, 0);
             this.rdbtnSeconddose.Name = "rdbtnSeconddose";
@@ -391,11 +426,12 @@
             this.rdbtnSeconddose.TabIndex = 21;
             this.rdbtnSeconddose.TabStop = true;
             this.rdbtnSeconddose.Text = "Second Dose";
-            this.rdbtnSeconddose.UseVisualStyleBackColor = true;
+            this.rdbtnSeconddose.UseVisualStyleBackColor = false;
             // 
             // rdbtnBooster
             // 
             this.rdbtnBooster.AutoSize = true;
+            this.rdbtnBooster.BackColor = System.Drawing.Color.Transparent;
             this.rdbtnBooster.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rdbtnBooster.Location = new System.Drawing.Point(480, 0);
             this.rdbtnBooster.Name = "rdbtnBooster";
@@ -403,11 +439,12 @@
             this.rdbtnBooster.TabIndex = 21;
             this.rdbtnBooster.TabStop = true;
             this.rdbtnBooster.Text = "Booster";
-            this.rdbtnBooster.UseVisualStyleBackColor = true;
+            this.rdbtnBooster.UseVisualStyleBackColor = false;
             // 
             // rdbtnFirstdose
             // 
             this.rdbtnFirstdose.AutoSize = true;
+            this.rdbtnFirstdose.BackColor = System.Drawing.Color.Transparent;
             this.rdbtnFirstdose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rdbtnFirstdose.Location = new System.Drawing.Point(178, 0);
             this.rdbtnFirstdose.Name = "rdbtnFirstdose";
@@ -415,10 +452,11 @@
             this.rdbtnFirstdose.TabIndex = 20;
             this.rdbtnFirstdose.TabStop = true;
             this.rdbtnFirstdose.Text = "First Dose";
-            this.rdbtnFirstdose.UseVisualStyleBackColor = true;
+            this.rdbtnFirstdose.UseVisualStyleBackColor = false;
             // 
             // grpbxSymptoms
             // 
+            this.grpbxSymptoms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpbxSymptoms.Controls.Add(this.rdbtnSymptomsno);
             this.grpbxSymptoms.Controls.Add(this.rdbtnSymptomsyes);
             this.grpbxSymptoms.Controls.Add(this.lblSymptoms);
@@ -432,6 +470,7 @@
             // rdbtnSymptomsno
             // 
             this.rdbtnSymptomsno.AutoSize = true;
+            this.rdbtnSymptomsno.BackColor = System.Drawing.Color.Transparent;
             this.rdbtnSymptomsno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdbtnSymptomsno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rdbtnSymptomsno.Location = new System.Drawing.Point(544, 10);
@@ -440,11 +479,12 @@
             this.rdbtnSymptomsno.TabIndex = 21;
             this.rdbtnSymptomsno.TabStop = true;
             this.rdbtnSymptomsno.Text = "No";
-            this.rdbtnSymptomsno.UseVisualStyleBackColor = true;
+            this.rdbtnSymptomsno.UseVisualStyleBackColor = false;
             // 
             // rdbtnSymptomsyes
             // 
             this.rdbtnSymptomsyes.AutoSize = true;
+            this.rdbtnSymptomsyes.BackColor = System.Drawing.Color.Transparent;
             this.rdbtnSymptomsyes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdbtnSymptomsyes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rdbtnSymptomsyes.Location = new System.Drawing.Point(456, 10);
@@ -453,12 +493,14 @@
             this.rdbtnSymptomsyes.TabIndex = 20;
             this.rdbtnSymptomsyes.TabStop = true;
             this.rdbtnSymptomsyes.Text = "Yes";
-            this.rdbtnSymptomsyes.UseVisualStyleBackColor = true;
+            this.rdbtnSymptomsyes.UseVisualStyleBackColor = false;
             // 
             // lblSymptoms
             // 
             this.lblSymptoms.AutoSize = true;
+            this.lblSymptoms.BackColor = System.Drawing.Color.Transparent;
             this.lblSymptoms.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSymptoms.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblSymptoms.Location = new System.Drawing.Point(13, 8);
             this.lblSymptoms.Name = "lblSymptoms";
             this.lblSymptoms.Size = new System.Drawing.Size(416, 19);
@@ -467,10 +509,14 @@
             // 
             // grpbxPersonalcontact
             // 
+            this.grpbxPersonalcontact.BackColor = System.Drawing.Color.Transparent;
+            this.grpbxPersonalcontact.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpbxPersonalcontact.Controls.Add(this.rdbtnPersonalcontactno);
             this.grpbxPersonalcontact.Controls.Add(this.rdbtnPersonalcontactyes);
             this.grpbxPersonalcontact.Controls.Add(this.lblPersonalcontact);
+            this.grpbxPersonalcontact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpbxPersonalcontact.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.grpbxPersonalcontact.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grpbxPersonalcontact.Location = new System.Drawing.Point(543, 260);
             this.grpbxPersonalcontact.Name = "grpbxPersonalcontact";
             this.grpbxPersonalcontact.Size = new System.Drawing.Size(638, 32);
@@ -489,6 +535,7 @@
             this.rdbtnPersonalcontactno.TabStop = true;
             this.rdbtnPersonalcontactno.Text = "No";
             this.rdbtnPersonalcontactno.UseVisualStyleBackColor = true;
+            this.rdbtnPersonalcontactno.CheckedChanged += new System.EventHandler(this.rdbtnPersonalcontactno_CheckedChanged);
             // 
             // rdbtnPersonalcontactyes
             // 
@@ -502,6 +549,7 @@
             this.rdbtnPersonalcontactyes.TabStop = true;
             this.rdbtnPersonalcontactyes.Text = "Yes";
             this.rdbtnPersonalcontactyes.UseVisualStyleBackColor = true;
+            this.rdbtnPersonalcontactyes.CheckedChanged += new System.EventHandler(this.rdbtnPersonalcontactyes_CheckedChanged);
             // 
             // lblPersonalcontact
             // 
@@ -515,10 +563,13 @@
             // 
             // grpbxPositive
             // 
+            this.grpbxPositive.BackColor = System.Drawing.Color.Transparent;
+            this.grpbxPositive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpbxPositive.Controls.Add(this.rdbtnPositiveno);
             this.grpbxPositive.Controls.Add(this.rdbtnPositiveyes);
             this.grpbxPositive.Controls.Add(this.lblPositive);
             this.grpbxPositive.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.grpbxPositive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grpbxPositive.Location = new System.Drawing.Point(543, 288);
             this.grpbxPositive.Name = "grpbxPositive";
             this.grpbxPositive.Size = new System.Drawing.Size(638, 42);
@@ -564,8 +615,9 @@
             // lblTravelinformation
             // 
             this.lblTravelinformation.AutoSize = true;
+            this.lblTravelinformation.BackColor = System.Drawing.Color.Transparent;
             this.lblTravelinformation.Font = new System.Drawing.Font("Calisto MT", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblTravelinformation.Location = new System.Drawing.Point(18, 376);
+            this.lblTravelinformation.Location = new System.Drawing.Point(349, 392);
             this.lblTravelinformation.Name = "lblTravelinformation";
             this.lblTravelinformation.Size = new System.Drawing.Size(383, 38);
             this.lblTravelinformation.TabIndex = 30;
@@ -583,6 +635,7 @@
             // 
             // txtbxCurrentlocation
             // 
+            this.txtbxCurrentlocation.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxCurrentlocation.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxCurrentlocation.Location = new System.Drawing.Point(179, 433);
             this.txtbxCurrentlocation.Name = "txtbxCurrentlocation";
@@ -593,6 +646,7 @@
             // 
             // txtbxDesiredDestination
             // 
+            this.txtbxDesiredDestination.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxDesiredDestination.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxDesiredDestination.Location = new System.Drawing.Point(716, 433);
             this.txtbxDesiredDestination.Name = "txtbxDesiredDestination";
@@ -604,6 +658,7 @@
             // lblDesireddestination
             // 
             this.lblDesireddestination.AutoSize = true;
+            this.lblDesireddestination.BackColor = System.Drawing.Color.Transparent;
             this.lblDesireddestination.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDesireddestination.Location = new System.Drawing.Point(543, 437);
             this.lblDesireddestination.Name = "lblDesireddestination";
@@ -613,6 +668,7 @@
             // 
             // txtbxDateandTime
             // 
+            this.txtbxDateandTime.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtbxDateandTime.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtbxDateandTime.Location = new System.Drawing.Point(730, 630);
             this.txtbxDateandTime.Name = "txtbxDateandTime";
@@ -623,6 +679,7 @@
             // lblDateandtime
             // 
             this.lblDateandtime.AutoSize = true;
+            this.lblDateandtime.BackColor = System.Drawing.Color.Transparent;
             this.lblDateandtime.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDateandtime.Location = new System.Drawing.Point(543, 633);
             this.lblDateandtime.Name = "lblDateandtime";
@@ -630,26 +687,15 @@
             this.lblDateandtime.TabIndex = 65;
             this.lblDateandtime.Text = "Date and Time";
             // 
-            // lblPNR
-            // 
-            this.lblPNR.AutoSize = true;
-            this.lblPNR.Font = new System.Drawing.Font("Palace Script MT", 96F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblPNR.Location = new System.Drawing.Point(464, -58);
-            this.lblPNR.Name = "lblPNR";
-            this.lblPNR.Size = new System.Drawing.Size(291, 119);
-            this.lblPNR.TabIndex = 68;
-            this.lblPNR.Text = "PNR";
-            this.lblPNR.Click += new System.EventHandler(this.lblPNR_Click);
-            // 
             // lblContactTracingForm
             // 
             this.lblContactTracingForm.AutoSize = true;
             this.lblContactTracingForm.Font = new System.Drawing.Font("Palace Script MT", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblContactTracingForm.Location = new System.Drawing.Point(326, 0);
+            this.lblContactTracingForm.Location = new System.Drawing.Point(191, 0);
             this.lblContactTracingForm.Name = "lblContactTracingForm";
-            this.lblContactTracingForm.Size = new System.Drawing.Size(587, 89);
+            this.lblContactTracingForm.Size = new System.Drawing.Size(801, 89);
             this.lblContactTracingForm.TabIndex = 70;
-            this.lblContactTracingForm.Text = "Contact Tracing Form";
+            this.lblContactTracingForm.Text = "PNR  Contact Tracing Form";
             // 
             // lblCelcius
             // 
@@ -657,7 +703,7 @@
             this.lblCelcius.BackColor = System.Drawing.Color.Transparent;
             this.lblCelcius.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblCelcius.ForeColor = System.Drawing.Color.Black;
-            this.lblCelcius.Location = new System.Drawing.Point(788, 138);
+            this.lblCelcius.Location = new System.Drawing.Point(785, 135);
             this.lblCelcius.Name = "lblCelcius";
             this.lblCelcius.Size = new System.Drawing.Size(26, 18);
             this.lblCelcius.TabIndex = 72;
@@ -665,6 +711,7 @@
             // 
             // grpbxCurrentLocation
             // 
+            this.grpbxCurrentLocation.BackColor = System.Drawing.Color.Transparent;
             this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentBicutaan);
             this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentTutuban);
             this.grpbxCurrentLocation.Controls.Add(this.rdbtnCurrentEspana);
@@ -881,6 +928,7 @@
             // 
             // grpbxDesired
             // 
+            this.grpbxDesired.BackColor = System.Drawing.Color.Transparent;
             this.grpbxDesired.Controls.Add(this.rdbtnDesiredTutuban);
             this.grpbxDesired.Controls.Add(this.rdbtnDesiredEspana);
             this.grpbxDesired.Controls.Add(this.rdbtnDesiredPaco);
@@ -1066,15 +1114,17 @@
             this.rdbtnDesiredBicutan.TabStop = true;
             this.rdbtnDesiredBicutan.Text = "Bicutan";
             this.rdbtnDesiredBicutan.UseVisualStyleBackColor = true;
+            this.rdbtnDesiredBicutan.CheckedChanged += new System.EventHandler(this.rdbtnDesiredBicutan_CheckedChanged);
             // 
             // btnStreamReader
             // 
+            this.btnStreamReader.BackColor = System.Drawing.Color.Lime;
             this.btnStreamReader.Location = new System.Drawing.Point(285, 44);
             this.btnStreamReader.Name = "btnStreamReader";
             this.btnStreamReader.Size = new System.Drawing.Size(156, 32);
             this.btnStreamReader.TabIndex = 77;
             this.btnStreamReader.Text = "Sort Date";
-            this.btnStreamReader.UseVisualStyleBackColor = true;
+            this.btnStreamReader.UseVisualStyleBackColor = false;
             this.btnStreamReader.Click += new System.EventHandler(this.btnStreamReader_Click);
             // 
             // txtbxDateSort
@@ -1087,25 +1137,36 @@
             // 
             // btnSubmitAllFiles
             // 
-            this.btnSubmitAllFiles.Location = new System.Drawing.Point(788, 669);
+            this.btnSubmitAllFiles.BackColor = System.Drawing.Color.Beige;
+            this.btnSubmitAllFiles.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSubmitAllFiles.Location = new System.Drawing.Point(785, 663);
             this.btnSubmitAllFiles.Name = "btnSubmitAllFiles";
             this.btnSubmitAllFiles.Size = new System.Drawing.Size(290, 51);
             this.btnSubmitAllFiles.TabIndex = 81;
             this.btnSubmitAllFiles.Text = "Submit";
-            this.btnSubmitAllFiles.UseVisualStyleBackColor = true;
+            this.btnSubmitAllFiles.UseVisualStyleBackColor = false;
             this.btnSubmitAllFiles.Click += new System.EventHandler(this.btnSubmitAllFiles_Click);
             // 
             // grpbxFeatures
             // 
+            this.grpbxFeatures.BackColor = System.Drawing.Color.Moccasin;
+            this.grpbxFeatures.Controls.Add(this.dateSort);
             this.grpbxFeatures.Controls.Add(this.lblSortDate);
             this.grpbxFeatures.Controls.Add(this.btnStreamReader);
             this.grpbxFeatures.Controls.Add(this.txtbxDateSort);
-            this.grpbxFeatures.Location = new System.Drawing.Point(34, 613);
+            this.grpbxFeatures.Location = new System.Drawing.Point(25, 710);
             this.grpbxFeatures.Name = "grpbxFeatures";
             this.grpbxFeatures.Size = new System.Drawing.Size(462, 96);
             this.grpbxFeatures.TabIndex = 82;
             this.grpbxFeatures.TabStop = false;
             this.grpbxFeatures.Text = "Features Included to Sort Date";
+            // 
+            // dateSort
+            // 
+            this.dateSort.Location = new System.Drawing.Point(18, 47);
+            this.dateSort.Name = "dateSort";
+            this.dateSort.Size = new System.Drawing.Size(261, 29);
+            this.dateSort.TabIndex = 83;
             // 
             // lblSortDate
             // 
@@ -1120,6 +1181,7 @@
             // lblCurrent
             // 
             this.lblCurrent.AutoSize = true;
+            this.lblCurrent.BackColor = System.Drawing.Color.Transparent;
             this.lblCurrent.Font = new System.Drawing.Font("HelveticaNeueLT Std Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCurrent.Location = new System.Drawing.Point(26, 436);
             this.lblCurrent.Name = "lblCurrent";
@@ -1127,22 +1189,69 @@
             this.lblCurrent.TabIndex = 83;
             this.lblCurrent.Text = "Current Location";
             // 
+            // pctrbxPNR
+            // 
+            this.pctrbxPNR.BackColor = System.Drawing.Color.Transparent;
+            this.pctrbxPNR.BackgroundImage = global::PNR_Contact_Tracing_Project.Properties.Resources.Philippine_National_Railways_Logo;
+            this.pctrbxPNR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pctrbxPNR.ErrorImage = null;
+            this.pctrbxPNR.Location = new System.Drawing.Point(104, 0);
+            this.pctrbxPNR.Name = "pctrbxPNR";
+            this.pctrbxPNR.Size = new System.Drawing.Size(100, 80);
+            this.pctrbxPNR.TabIndex = 84;
+            this.pctrbxPNR.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::PNR_Contact_Tracing_Project.Properties.Resources._5ea2da2932919902ec99824f_image_14;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(976, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 80);
+            this.pictureBox1.TabIndex = 85;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Beige;
+            this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.Location = new System.Drawing.Point(1054, 787);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(127, 31);
+            this.btnExit.TabIndex = 86;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // datePicker
+            // 
+            this.datePicker.Location = new System.Drawing.Point(729, 630);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(346, 29);
+            this.datePicker.TabIndex = 87;
+            this.datePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1718, 830);
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.ClientSize = new System.Drawing.Size(1200, 830);
+            this.Controls.Add(this.datePicker);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pctrbxPNR);
             this.Controls.Add(this.lblCurrent);
             this.Controls.Add(this.grpbxFeatures);
+            this.Controls.Add(this.lblContactTracingForm);
             this.Controls.Add(this.btnSubmitAllFiles);
             this.Controls.Add(this.grpbxDesired);
             this.Controls.Add(this.grpbxSymptoms);
             this.Controls.Add(this.grpbxCurrentLocation);
             this.Controls.Add(this.lblCelcius);
-            this.Controls.Add(this.lblContactTracingForm);
             this.Controls.Add(this.grpbxDose);
-            this.Controls.Add(this.lblPNR);
             this.Controls.Add(this.txtbxDateandTime);
             this.Controls.Add(this.txtbxCurrentlocation);
             this.Controls.Add(this.lblDateandtime);
@@ -1173,7 +1282,9 @@
             this.Controls.Add(this.txtbxFirstname);
             this.Controls.Add(this.lblFirstname);
             this.Controls.Add(this.btnSubmit);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.grpbxVaccinated.ResumeLayout(false);
@@ -1192,6 +1303,8 @@
             this.grpbxDesired.PerformLayout();
             this.grpbxFeatures.ResumeLayout(false);
             this.grpbxFeatures.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbxPNR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1245,7 +1358,6 @@
         private Label lblDesireddestination;
         private TextBox txtbxDateandTime;
         private Label lblDateandtime;
-        private Label lblPNR;
         private Label lblContactTracingForm;
         private Label lblCelcius;
         private GroupBox grpbxCurrentLocation;
@@ -1288,5 +1400,10 @@
         private Label lblSortDate;
         private Label lblCurrent;
         private RadioButton rdbtnCurrentBicutaan;
+        private PictureBox pctrbxPNR;
+        private PictureBox pictureBox1;
+        private Button btnExit;
+        private DateTimePicker datePicker;
+        private DateTimePicker dateSort;
     }
 }

@@ -10,25 +10,7 @@ namespace PNR_Contact_Tracing_Project
             InitializeComponent();
         }
 
-        public void Submit() // I tried to disable the buttons if there is no info in text box, but it did not work for some reasons
-        {
 
-        }
-
-        private void txtbxDateandTime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e) // When you clicked Submit, Writing files in txt file using WriteLine 
-        {
-
-        }
 
         private void btnSubmitAllFiles_Click(object sender, EventArgs e)
         {
@@ -84,8 +66,8 @@ namespace PNR_Contact_Tracing_Project
                 }
                 else if (rdbtnPersonalcontactyes.Checked)
                 {
-                    rdbtnPersonalcontactno.Text = "No";
-                    contact = "No";
+                    rdbtnPersonalcontactno.Text = "Yes";
+                    contact = rdbtnPersonalcontactno.Text;
                 }
 
                 string positive = ""; // for positive
@@ -244,7 +226,7 @@ namespace PNR_Contact_Tracing_Project
                     }
                 }
 
-                StreamWriter file = new StreamWriter(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + txtbxDateandTime.Text + ".txt", true); // appended na siya kaya mauulit
+                StreamWriter file = new StreamWriter(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + datePicker.Text + ".txt", true); // appended na siya kaya mauulit
 
                 // They cant 
 
@@ -266,24 +248,19 @@ namespace PNR_Contact_Tracing_Project
 
                 // Travel Information
                 file.WriteLine("***Travel Information***");
-                file.WriteLine("Date and Time you ride this train : " + txtbxDateandTime.Text);
-                file.WriteLine("Current Location                  : " + txtbxCurrentlocation.Text);
-                file.WriteLine("Desired Destination               : " + txtbxDesiredDestination.Text);
+                file.WriteLine("Date you ride this train : " + this.datePicker.Text);
+                file.WriteLine("Current Location         : " + txtbxCurrentlocation.Text);
+                file.WriteLine("Desired Destination      : " + txtbxDesiredDestination.Text);
 
                 // CLosing Remarks
                 file.WriteLine("**************************");
 
                 file.Close();
 
-                MessageBox.Show("We are pleased to serve you with genuine love and joy. Thank you for choosing PNR Station. Have a safe ride ahead.", "PNR Station");
-                if (MessageBox.Show("Submit another response?, Click 'Cancel' to  read all files", "PNR Station", MessageBoxButtons.RetryCancel) == DialogResult.Cancel)
-                {
-                    {
-                        MessageBox.Show("You can click Date Sort to find your data there.");
-                    }
-                }
-                else // repeats the process
-                {
+                
+
+                MessageBox.Show("We are pleased to serve you, " + txtbxFirstname.Text + " " + txtbxLastName.Text + ", with genuine love and joy. Thank you for choosing PNR Station. Have a safe ride ahead.", "PNR Station");
+ 
                     // textboxes to ""
                     txtbxFirstname.Text = "";
                     txtbxLastName.Text = "";
@@ -309,65 +286,58 @@ namespace PNR_Contact_Tracing_Project
                     rdbtnPersonalcontactno.Checked = false;
                     rdbtnPositiveyes.Checked = false;
                     rdbtnPositiveno.Checked = false;
-                }
+
+                    // radiobuttons of locations, desired and current to unchecked
+                    rdbtnCurrentBicutaan.Checked = false;
+                    rdbtnCurrentBlumentrit.Checked = false;
+                    rdbtnCurrentDelaRosa.Checked = false;
+                    rdbtnCurrentEdsa.Checked = false;
+                    rdbtnCurrentEspana.Checked = false;
+                    rdbtnCurrentFTI.Checked = false;
+                    rdbtnCurrentLaonLaan.Checked = false;
+                    rdbtnCurrentNichols.Checked = false;
+                    rdbtnCurrentPaco.Checked = false;
+                    rdbtnCurrentPandacan.Checked = false;
+                    rdbtnCurrentPasayRoad.Checked = false;
+                    rdbtnCurrentSanAndres.Checked = false;
+                    rdbtnCurrentStaMesa.Checked = false;
+                    rdbtnCurrentTutuban.Checked = false;
+                    rdbtnCurrentVitoCruz.Checked = false;
+
+                    // radiobuttons of locations, desired and current to unchecked
+                    rdbtnDesiredBicutan.Checked = false;
+                    rdbtnDesiredBlumentrit.Checked = false;
+                    rdbtnDesiredDelaRosa.Checked = false;
+                    rdbtnDesiredEDSA.Checked = false;
+                    rdbtnDesiredEspana.Checked = false;
+                    rdbtnDesiredFTI.Checked = false;
+                    rdbtnDesiredLaonLaan.Checked = false;
+                    rdbtnDesiredNichols.Checked = false;
+                    rdbtnDesiredPaco.Checked = false;
+                    rdbtnDesiredPandacan.Checked = false;
+                    rdbtnDesiredPasayRoad.Checked = false;
+                    rdbtnDesiredSanAndres.Checked = false;
+                    rdbtnDesiredStaMesa.Checked = false;
+                    rdbtnDesiredTutuban.Checked = false;
+                    rdbtnDesiredVitoCruz.Checked = false;
+                
             }
         }
 
-        // List All // I'm still trying to fix the first condition to read all files
 
-        //private void btnReadtoAll_Click(object sender, EventArgs e) 
-        //{
-        //string filepath = @"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder";
-        //string[] txtfiles = Directory.GetFiles(filepath, "*.txt", SearchOption.TopDirectoryOnly);
-        //using (var output = File.Create(path + "output.txt"))
-        //{
-        //    foreach (var file in files)
-        //    {
-        //        using (var data = File.OpenRead(file))
-        //        {
-        //            data.CopyTo(output);
-        //        }
-        //    }
-        //}
-
-
-        //    //var txtfiles = (@"C: \Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + txtbxDateandTime.Text + ".txt", true);
-        //    //var text = File.ReadAllText(txtfiles);
-
-        //    //string path = @"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\";
-        //    //string[] files = Directory.GetFiles(path);
-
-        //    ////String readall = reader2.ReadToEnd();
-        //    //MessageBox.Show(files.ToString());         
-
-        //}
-
-
-        private void btnStreamReader_Click(object sender, EventArgs e) // For Sorting Dates
+        private void btnExit_Click(object sender, EventArgs e) // To Exit the Application
         {
-            StreamReader reader = new StreamReader(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + txtbxDateSort.Text + ".txt"); // Assuming that 
+            MessageBox.Show("Thank you! Come again.");
+            Application.Exit();
+        }
+
+        private void btnStreamReader_Click(object sender, EventArgs e) // For Sorting Dates and Reading it
+        {
+            StreamReader reader = new StreamReader(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + dateSort.Text + ".txt", true); // Assuming that 
             String all = reader.ReadToEnd();
             MessageBox.Show(all, "Sorted by Date");
-        }
 
-        private void btnDateandtime_Click(object sender, EventArgs e) // For Time and Date
-        {
-          
-        }
-
-        private void lblPhilippineNationalRailways_Click(object sender, EventArgs e)
-        {
-            // Phillipine National Railways Label
-        }
-
-        private void btnDateandTime_Click_1(object sender, EventArgs e) // For date and time updated
-        {
-            
-        }
-
-        private void lblPNR_Click(object sender, EventArgs e)
-        {
-
+            this.dateSort.Text = "";
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -377,21 +347,6 @@ namespace PNR_Contact_Tracing_Project
             if (rdbtnCurrentVitoCruz.Checked == false)
             {
                 rdbtnDesiredVitoCruz.Enabled = true;
-            }
-        }
-
-        private void grpbxCurrentLocation_Enter(object sender, EventArgs e)
-        {
-            // 
-        }
-
-        private void rdbtnCurrentBicutan_CheckedChanged(object sender, EventArgs e)
-        {
-            rdbtnDesiredBicutan.Enabled = false;
-            rdbtnDesiredBicutan.Checked = false;
-            if (rdbtnCurrentBicutan.Checked == false)
-            {
-                rdbtnDesiredBicutan.Enabled = true;
             }
         }
 
@@ -551,7 +506,60 @@ namespace PNR_Contact_Tracing_Project
             }
         }
 
-        // I miscliked these and everytime I want to delete it, it results to error
+        private void rdbtnCurrentBicutaan_CheckedChanged(object sender, EventArgs e)
+        {
+            {
+                rdbtnDesiredBicutan.Enabled = false;
+                rdbtnDesiredBicutan.Checked = false;
+                if (rdbtnCurrentBicutaan.Checked == false)
+                {
+                    rdbtnDesiredBicutan.Enabled = true;
+                }
+            }
+        }
+
+        private void rdbtnPersonalcontactyes_CheckedChanged(object sender, EventArgs e)
+        {
+            rdbtnPersonalcontactyes.Text = "Yes";
+        }
+
+        private void rdbtnPersonalcontactno_CheckedChanged(object sender, EventArgs e)
+        {
+            rdbtnPersonalcontactno.Text = "No";
+        }
+
+        // I miscliked these and everytime I want to delete it, it results to error in the designer
+        private void btnDateandtime_Click(object sender, EventArgs e) // For Time and Date
+        {
+          
+        }
+
+        private void lblPhilippineNationalRailways_Click(object sender, EventArgs e)
+        {
+            // Phillipine National Railways Label
+        }
+
+        private void btnDateandTime_Click_1(object sender, EventArgs e) // For date and time updated
+        {
+            
+        }
+
+        private void lblPNR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void grpbxCurrentLocation_Enter(object sender, EventArgs e)
+        {
+            // 
+        }
+
+        private void rdbtnCurrentBicutan_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void txtbxDesiredDestination_TextChanged(object sender, EventArgs e)
         {
@@ -600,16 +608,35 @@ namespace PNR_Contact_Tracing_Project
 
         }
 
-        private void rdbtnCurrentBicutaan_CheckedChanged(object sender, EventArgs e)
+        private void btnReadAll_Click(object sender, EventArgs e)
         {
-            {
-                rdbtnDesiredBicutan.Enabled = false;
-                rdbtnDesiredBicutan.Checked = false;
-                if (rdbtnCurrentBicutaan.Checked == false)
-                {
-                    rdbtnDesiredBicutan.Enabled = true;
-                }
-            }
+
+        }
+
+        private void rdbtnDesiredBicutan_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void txtbxDateandTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e) // When you clicked Submit, Writing files in txt file using WriteLine 
+        {
+
         }
     }
 }

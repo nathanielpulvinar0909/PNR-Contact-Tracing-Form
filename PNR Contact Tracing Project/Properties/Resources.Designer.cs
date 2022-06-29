@@ -59,5 +59,25 @@ namespace PNR_Contact_Tracing_Project.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5ea2da2932919902ec99824f_image_14 {
+            get {
+                object obj = ResourceManager.GetObject("5ea2da2932919902ec99824f_image 14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Philippine_National_Railways_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Philippine_National_Railways_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
