@@ -1163,9 +1163,9 @@
             // 
             // dateSort
             // 
-            this.dateSort.Location = new System.Drawing.Point(18, 47);
+            this.dateSort.Location = new System.Drawing.Point(37, 47);
             this.dateSort.Name = "dateSort";
-            this.dateSort.Size = new System.Drawing.Size(261, 29);
+            this.dateSort.Size = new System.Drawing.Size(242, 29);
             this.dateSort.TabIndex = 83;
             // 
             // lblSortDate
@@ -1227,7 +1227,7 @@
             // 
             // datePicker
             // 
-            this.datePicker.Location = new System.Drawing.Point(729, 630);
+            this.datePicker.Location = new System.Drawing.Point(730, 628);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(346, 29);
             this.datePicker.TabIndex = 87;
@@ -1238,7 +1238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1200, 830);
+            this.ClientSize = new System.Drawing.Size(1253, 830);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox1);
@@ -1403,7 +1403,7 @@
         private PictureBox pctrbxPNR;
         private PictureBox pictureBox1;
         private Button btnExit;
-        private DateTimePicker datePicker;
         private DateTimePicker dateSort;
+        private DateTimePicker datePicker;
     }
 }

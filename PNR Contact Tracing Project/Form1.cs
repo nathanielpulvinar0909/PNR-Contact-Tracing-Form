@@ -320,7 +320,6 @@ namespace PNR_Contact_Tracing_Project
                     rdbtnDesiredStaMesa.Checked = false;
                     rdbtnDesiredTutuban.Checked = false;
                     rdbtnDesiredVitoCruz.Checked = false;
-                
             }
         }
 
@@ -333,7 +332,7 @@ namespace PNR_Contact_Tracing_Project
 
         private void btnStreamReader_Click(object sender, EventArgs e) // For Sorting Dates and Reading it
         {
-            StreamReader reader = new StreamReader(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + dateSort.Text + ".txt", true); // Assuming that 
+            StreamReader reader = new StreamReader(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + dateSort.Text + ".txt", true);
             String all = reader.ReadToEnd();
             MessageBox.Show(all, "Sorted by Date");
 
