@@ -1,10 +1,10 @@
 using System.IO;
+using QRCoder;
 
 namespace PNR_Contact_Tracing_Project
 {
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();
@@ -15,252 +15,248 @@ namespace PNR_Contact_Tracing_Project
         private void btnSubmitAllFiles_Click(object sender, EventArgs e)
         {
             {
-                string vaccinated = ""; // for vaccinated radiobutton
-
-                if (rdbtnVaccinatedyes.Checked)
                 {
-                    vaccinated = "Yes";
-                }
-                else if (rdbtnVaccinatedno.Checked)
-                {
-                    vaccinated = "No";
-                }
+                    string vaccinated = ""; // for vaccinated radiobutton
 
-                string symptoms = ""; // for symmtoms radiobutton
+                    if (rdbtnVaccinatedyes.Checked)
+                    {
+                        vaccinated = "Yes";
+                    }
+                    else if (rdbtnVaccinatedno.Checked)
+                    {
+                        vaccinated = "No";
+                    }
 
-                if (rdbtnSymptomsyes.Checked)
-                {
-                    symptoms = "Yes";
+                    string symptoms = ""; // for symmtoms radiobutton
 
-                }
-                else if (rdbtnSymptomsno.Checked)
-                {
-                    symptoms = "No";
-                }
+                    if (rdbtnSymptomsyes.Checked)
+                    {
+                        symptoms = "Yes";
 
-                string dose = ""; // for vaccination dose
+                    }
+                    else if (rdbtnSymptomsno.Checked)
+                    {
+                        symptoms = "No";
+                    }
 
-                if (rdbtnFirstdose.Checked)
-                {
-                    dose = "First Dose";
-                }
-                else if (rdbtnSeconddose.Checked)
-                {
-                    dose = "Second Dose";
-                }
-                else if (rdbtnBooster.Checked)
-                {
-                    dose = "Booster";
-                }
-                else
-                {
-                    dose = "Not yet vaccinated";
-                }
+                    string dose = ""; // for vaccination dose
 
-                string contact = ""; // for personal contact
+                    if (rdbtnFirstdose.Checked)
+                    {
+                        dose = "First Dose";
+                    }
+                    else if (rdbtnSeconddose.Checked)
+                    {
+                        dose = "Second Dose";
+                    }
+                    else if (rdbtnBooster.Checked)
+                    {
+                        dose = "Booster";
+                    }
+                    else
+                    {
+                        dose = "Not yet vaccinated";
+                    }
 
-                if (rdbtnPersonalcontactyes.Checked)
-                {
-                    rdbtnPersonalcontactyes.Text = "Yes";
-                    contact = rdbtnPersonalcontactyes.Text;
-                }
-                else if (rdbtnPersonalcontactyes.Checked)
-                {
-                    rdbtnPersonalcontactno.Text = "Yes";
-                    contact = rdbtnPersonalcontactno.Text;
-                }
+                    string contact = ""; // for personal contact
 
-                string positive = ""; // for positive
+                    if (rdbtnPersonalcontactyes.Checked)
+                    {
+                        rdbtnPersonalcontactyes.Text = "Yes";
+                        contact = rdbtnPersonalcontactyes.Text;
+                    }
+                    else if (rdbtnPersonalcontactyes.Checked)
+                    {
+                        rdbtnPersonalcontactno.Text = "Yes";
+                        contact = rdbtnPersonalcontactno.Text;
+                    }
 
-                if (rdbtnPositiveyes.Checked)
-                {
-                    positive = rdbtnPositiveyes.Text;
-                }
+                    string positive = ""; // for positive
 
-                else if (rdbtnPositiveno.Checked)
-                {
-                    positive = rdbtnPositiveno.Text;
+                    if (rdbtnPositiveyes.Checked)
+                    {
+                        positive = rdbtnPositiveyes.Text;
+                    }
 
-                }
+                    else if (rdbtnPositiveno.Checked)
+                    {
+                        positive = rdbtnPositiveno.Text;
 
-                string eligibility = ""; // If all yes; cannot ride the train depends on the protocols
+                    }
 
-                if ((symptoms == "Yes") && (contact == "Yes") && (positive == "Yes"))
-                {
-                    eligibility = "Sorry. I'm afraid you cannot ride this train";
-                }
-                else
-                {
-                    eligibility = "Yes. You are eligible to ride this train";
-                }
+                    string eligibility = ""; // If all yes; cannot ride the train depends on the protocols
 
-                string current = "";
+                    if ((symptoms == "Yes") && (contact == "Yes") && (positive == "Yes"))
+                    {
+                        eligibility = "Sorry. I'm afraid you cannot ride this train";
+                    }
+                    else
+                    {
+                        eligibility = "Yes. You are eligible to ride this train";
+                    }
 
-                if (current == "") // features that when you click your current location, if reflects on the textbox
-                {
-                    if (rdbtnCurrentBicutaan.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Bicutan";
-                    }
-                    else if (rdbtnCurrentFTI.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "FTI";
-                    }
-                    else if (rdbtnCurrentNichols.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Nichols";
-                    }
-                    else if (rdbtnCurrentEdsa.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "EDSA";
-                    }
-                    else if (rdbtnCurrentPasayRoad.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Pasay Road";
-                    }
-                    else if (rdbtnCurrentDelaRosa.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Dela Rosa";
-                    }
-                    else if (rdbtnCurrentVitoCruz.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Vito Cruz";
-                    }
-                    else if (rdbtnCurrentSanAndres.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "San Andres";
-                    }
-                    else if (rdbtnCurrentPaco.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Paco";
-                    }
-                    else if (rdbtnCurrentPandacan.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Pandacan";
-                    }
-                    else if (rdbtnCurrentStaMesa.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Sta. Mesa";
-                    }
-                    else if (rdbtnCurrentEspana.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Espana";
-                    }
-                    else if (rdbtnCurrentLaonLaan.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Laon Laan";
-                    }
-                    else if (rdbtnCurrentBlumentrit.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Blumentrit";
-                    }
-                    else if (rdbtnCurrentTutuban.Checked)
-                    {
-                        txtbxCurrentlocation.Text = "Tutuban";
-                    }
-                }
+                    string current = "";
 
-                string desired = "";
+                    if (current == "") // features that when you click your current location, if reflects on the textbox
+                    {
+                        if (rdbtnCurrentBicutaan.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Bicutan";
+                        }
+                        else if (rdbtnCurrentFTI.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "FTI";
+                        }
+                        else if (rdbtnCurrentNichols.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Nichols";
+                        }
+                        else if (rdbtnCurrentEdsa.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "EDSA";
+                        }
+                        else if (rdbtnCurrentPasayRoad.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Pasay Road";
+                        }
+                        else if (rdbtnCurrentDelaRosa.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Dela Rosa";
+                        }
+                        else if (rdbtnCurrentVitoCruz.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Vito Cruz";
+                        }
+                        else if (rdbtnCurrentSanAndres.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "San Andres";
+                        }
+                        else if (rdbtnCurrentPaco.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Paco";
+                        }
+                        else if (rdbtnCurrentPandacan.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Pandacan";
+                        }
+                        else if (rdbtnCurrentStaMesa.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Sta. Mesa";
+                        }
+                        else if (rdbtnCurrentEspana.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Espana";
+                        }
+                        else if (rdbtnCurrentLaonLaan.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Laon Laan";
+                        }
+                        else if (rdbtnCurrentBlumentrit.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Blumentrit";
+                        }
+                        else if (rdbtnCurrentTutuban.Checked)
+                        {
+                            txtbxCurrentlocation.Text = "Tutuban";
+                        }
+                    }
 
-                if (desired == "") // features that when you click your desired destination, if reflects on the textbox
-                {
-                    if (rdbtnDesiredBicutan.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Bicutan";
-                    }
-                    else if (rdbtnDesiredFTI.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "FTI";
-                    }
-                    else if (rdbtnDesiredNichols.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Nichols";
-                    }
-                    else if (rdbtnDesiredEDSA.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "EDSA";
-                    }
-                    else if (rdbtnDesiredPasayRoad.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Pasay Road";
-                    }
-                    else if (rdbtnDesiredDelaRosa.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Dela Rosa";
-                    }
-                    else if (rdbtnDesiredVitoCruz.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Vito Cruz";
-                    }
-                    else if (rdbtnDesiredSanAndres.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "San Andres";
-                    }
-                    else if (rdbtnDesiredPaco.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Paco";
-                    }
-                    else if (rdbtnDesiredPandacan.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Pandacan";
-                    }
-                    else if (rdbtnDesiredStaMesa.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Sta. Mesa";
-                    }
-                    else if (rdbtnDesiredEspana.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Espana";
-                    }
-                    else if (rdbtnDesiredLaonLaan.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Laon Laan";
-                    }
-                    else if (rdbtnDesiredBlumentrit.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Blumentrit";
-                    }
-                    else if (rdbtnDesiredTutuban.Checked)
-                    {
-                        txtbxDesiredDestination.Text = "Tutuban";
-                    }
-                }
+                    string desired = "";
 
-                StreamWriter file = new StreamWriter(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + datePicker.Text + ".txt", true); // appended na siya kaya mauulit
+                    if (desired == "") // features that when you click your desired destination, if reflects on the textbox
+                    {
+                        if (rdbtnDesiredBicutan.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Bicutan";
+                        }
+                        else if (rdbtnDesiredFTI.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "FTI";
+                        }
+                        else if (rdbtnDesiredNichols.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Nichols";
+                        }
+                        else if (rdbtnDesiredEDSA.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "EDSA";
+                        }
+                        else if (rdbtnDesiredPasayRoad.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Pasay Road";
+                        }
+                        else if (rdbtnDesiredDelaRosa.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Dela Rosa";
+                        }
+                        else if (rdbtnDesiredVitoCruz.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Vito Cruz";
+                        }
+                        else if (rdbtnDesiredSanAndres.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "San Andres";
+                        }
+                        else if (rdbtnDesiredPaco.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Paco";
+                        }
+                        else if (rdbtnDesiredPandacan.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Pandacan";
+                        }
+                        else if (rdbtnDesiredStaMesa.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Sta. Mesa";
+                        }
+                        else if (rdbtnDesiredEspana.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Espana";
+                        }
+                        else if (rdbtnDesiredLaonLaan.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Laon Laan";
+                        }
+                        else if (rdbtnDesiredBlumentrit.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Blumentrit";
+                        }
+                        else if (rdbtnDesiredTutuban.Checked)
+                        {
+                            txtbxDesiredDestination.Text = "Tutuban";
+                        }
+                    }
 
-                // They cant 
+                    StreamWriter file = new StreamWriter(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + datePicker.Text + ".txt", true); // appended na siya kaya mauulit
 
-                // Introduction
+                    // They cant 
 
-                // Personal Introduction
-                file.WriteLine("***Personal Information***");
-                file.WriteLine("Full Name of the Respondent: " + txtbxFirstname.Text + " " + txtbxLastName.Text);
-                file.WriteLine("Address                    : " + txtbxAddress.Text);
-                file.WriteLine("Age and Sex                : " + txtbxAge.Text + " years old and a " + txtbxSex.Text);
-                file.WriteLine("Mobile # and Email Address : " + txtbxMobilenumber.Text + " and " + txtbxEmailaddress.Text);
+                    // Introduction
 
-                // Health Information about Covid
-                file.WriteLine("***Health Information about Covid***");
-                file.WriteLine("Temperature                    : " + txtbxTemperature.Text + " Degrees");
-                file.WriteLine("Vaccinated, Dose               : " + vaccinated + " and " + dose);
-                file.WriteLine("Had symptoms, contact, positive: " + symptoms + " , " + contact + " , " + positive);
-                file.WriteLine("Elligible to travel            : " + eligibility);
+                    // Personal Introduction
+                    file.WriteLine("Personal Information");
+                    file.WriteLine("Full Name: " + txtbxFirstname.Text + " " + txtbxLastName.Text);
+                    file.WriteLine("Address: " + txtbxAddress.Text);
+                    file.WriteLine("Age and Sex: " + txtbxAge.Text + " years old and a " + txtbxSex.Text);
+                    file.WriteLine("Mobile # and Email Address: " + txtbxMobilenumber.Text + " and " + txtbxEmailaddress.Text);
 
-                // Travel Information
-                file.WriteLine("***Travel Information***");
-                file.WriteLine("Date you ride this train : " + this.datePicker.Text);
-                file.WriteLine("Current Location         : " + txtbxCurrentlocation.Text);
-                file.WriteLine("Desired Destination      : " + txtbxDesiredDestination.Text);
+                    // Health Information about Covid
+                    file.WriteLine("Health Information about Covid");
+                    file.WriteLine("Temperature: " + txtbxTemperature.Text + " Degrees");
+                    file.WriteLine("Vaccinated, Dose: " + vaccinated + " and " + dose);
+                    file.WriteLine("Had symptoms, contact, positive: " + symptoms + " , " + contact + " , " + positive);
+                    file.WriteLine("Elligible to travel: " + eligibility);
 
-                // CLosing Remarks
-                file.WriteLine("**************************");
+                    // Travel Information
+                    file.WriteLine("Travel Information");
+                    file.WriteLine("Date you ride this train: " + this.datePicker.Text);
+                    file.WriteLine("Current Location: " + txtbxCurrentlocation.Text);
+                    file.WriteLine("Desired Destination: " + txtbxDesiredDestination.Text);                    
 
-                file.Close();
+                    file.Close();
 
-                
+                    MessageBox.Show("We are pleased to serve you, " + txtbxFirstname.Text + " " + txtbxLastName.Text + ", with genuine love and joy. Thank you for choosing PNR Station. Have a safe ride ahead.", "PNR Station");
 
-                MessageBox.Show("We are pleased to serve you, " + txtbxFirstname.Text + " " + txtbxLastName.Text + ", with genuine love and joy. Thank you for choosing PNR Station. Have a safe ride ahead.", "PNR Station");
- 
                     // textboxes to ""
                     txtbxFirstname.Text = "";
                     txtbxLastName.Text = "";
@@ -274,7 +270,7 @@ namespace PNR_Contact_Tracing_Project
                     txtbxDateandTime.Text = "";
                     txtbxTemperature.Text = "";
 
-                    // radiobuttons to unchecked 
+                    //radiobuttons to unchecked
                     rdbtnVaccinatedyes.Checked = false;
                     rdbtnVaccinatedno.Checked = false;
                     rdbtnFirstdose.Checked = false;
@@ -320,7 +316,29 @@ namespace PNR_Contact_Tracing_Project
                     rdbtnDesiredStaMesa.Checked = false;
                     rdbtnDesiredTutuban.Checked = false;
                     rdbtnDesiredVitoCruz.Checked = false;
+                    }
             }
+        }
+
+        private void btnGenerateQRCode_Click(object sender, EventArgs e)
+        {
+            QRCodeGenerator generateQRCode = new QRCodeGenerator();
+            QRCodeData data = generateQRCode.CreateQrCode(txtbxQRInformation.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCode generateCode = new QRCode(data);
+            pctrbxQRCode.Image = generateCode.GetGraphic(5);
+        }
+
+        private void txtbxQRInformation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSaveQRInformation_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveQRInformation = new SaveFileDialog();
+            saveQRInformation.ShowDialog();
+            pctrbxQRCode.Image.Save(saveQRInformation.FileName);
+            MessageBox.Show("The QR Code is saved in your files.");
         }
 
 
@@ -335,6 +353,7 @@ namespace PNR_Contact_Tracing_Project
             StreamReader reader = new StreamReader(@"C:\Users\ASUS DEMO\Downloads\PNR Contact Tracing Folder\" + dateSort.Text + ".txt", true);
             String all = reader.ReadToEnd();
             MessageBox.Show(all, "Sorted by Date");
+            
 
             this.dateSort.Text = "";
         }
@@ -637,5 +656,11 @@ namespace PNR_Contact_Tracing_Project
         {
 
         }
+
+
+        
+
+
+
     }
 }

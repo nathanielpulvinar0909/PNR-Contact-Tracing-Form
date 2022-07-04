@@ -121,6 +121,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.btnGenerateQRCode = new System.Windows.Forms.Button();
+            this.pctrbxQRCode = new System.Windows.Forms.PictureBox();
+            this.txtbxQRInformation = new System.Windows.Forms.TextBox();
+            this.btnSaveQRInformation = new System.Windows.Forms.Button();
+            this.lblAddTextHere = new System.Windows.Forms.Label();
             this.grpbxVaccinated.SuspendLayout();
             this.grpbxDose.SuspendLayout();
             this.grpbxSymptoms.SuspendLayout();
@@ -131,6 +136,7 @@
             this.grpbxFeatures.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrbxPNR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbxQRCode)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -1233,12 +1239,70 @@
             this.datePicker.TabIndex = 87;
             this.datePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // btnGenerateQRCode
+            // 
+            this.btnGenerateQRCode.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnGenerateQRCode.Font = new System.Drawing.Font("HelveticaNeueLT Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGenerateQRCode.Location = new System.Drawing.Point(1587, 177);
+            this.btnGenerateQRCode.Name = "btnGenerateQRCode";
+            this.btnGenerateQRCode.Size = new System.Drawing.Size(228, 44);
+            this.btnGenerateQRCode.TabIndex = 90;
+            this.btnGenerateQRCode.Text = "Generate QR Code";
+            this.btnGenerateQRCode.UseVisualStyleBackColor = false;
+            this.btnGenerateQRCode.Click += new System.EventHandler(this.btnGenerateQRCode_Click);
+            // 
+            // pctrbxQRCode
+            // 
+            this.pctrbxQRCode.BackColor = System.Drawing.Color.White;
+            this.pctrbxQRCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pctrbxQRCode.Location = new System.Drawing.Point(1199, 232);
+            this.pctrbxQRCode.Name = "pctrbxQRCode";
+            this.pctrbxQRCode.Size = new System.Drawing.Size(692, 574);
+            this.pctrbxQRCode.TabIndex = 91;
+            this.pctrbxQRCode.TabStop = false;
+            // 
+            // txtbxQRInformation
+            // 
+            this.txtbxQRInformation.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtbxQRInformation.Location = new System.Drawing.Point(1202, 38);
+            this.txtbxQRInformation.Multiline = true;
+            this.txtbxQRInformation.Name = "txtbxQRInformation";
+            this.txtbxQRInformation.Size = new System.Drawing.Size(689, 130);
+            this.txtbxQRInformation.TabIndex = 92;
+            // 
+            // btnSaveQRInformation
+            // 
+            this.btnSaveQRInformation.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnSaveQRInformation.Font = new System.Drawing.Font("HelveticaNeueLT Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSaveQRInformation.Location = new System.Drawing.Point(1353, 177);
+            this.btnSaveQRInformation.Name = "btnSaveQRInformation";
+            this.btnSaveQRInformation.Size = new System.Drawing.Size(228, 44);
+            this.btnSaveQRInformation.TabIndex = 93;
+            this.btnSaveQRInformation.Text = "Save QR Code";
+            this.btnSaveQRInformation.UseVisualStyleBackColor = false;
+            this.btnSaveQRInformation.Click += new System.EventHandler(this.btnSaveQRInformation_Click);
+            // 
+            // lblAddTextHere
+            // 
+            this.lblAddTextHere.AutoSize = true;
+            this.lblAddTextHere.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAddTextHere.Location = new System.Drawing.Point(1202, 9);
+            this.lblAddTextHere.Name = "lblAddTextHere";
+            this.lblAddTextHere.Size = new System.Drawing.Size(406, 25);
+            this.lblAddTextHere.TabIndex = 94;
+            this.lblAddTextHere.Text = "Input your text here to generate your QR Code.";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1253, 830);
+            this.ClientSize = new System.Drawing.Size(1924, 830);
+            this.Controls.Add(this.lblAddTextHere);
+            this.Controls.Add(this.btnSaveQRInformation);
+            this.Controls.Add(this.txtbxQRInformation);
+            this.Controls.Add(this.pctrbxQRCode);
+            this.Controls.Add(this.btnGenerateQRCode);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox1);
@@ -1305,6 +1369,7 @@
             this.grpbxFeatures.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrbxPNR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbxQRCode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1405,5 +1470,10 @@
         private Button btnExit;
         private DateTimePicker dateSort;
         private DateTimePicker datePicker;
+        private Button btnGenerateQRCode;
+        private PictureBox pctrbxQRCode;
+        private TextBox txtbxQRInformation;
+        private Button btnSaveQRInformation;
+        private Label lblAddTextHere;
     }
 }
