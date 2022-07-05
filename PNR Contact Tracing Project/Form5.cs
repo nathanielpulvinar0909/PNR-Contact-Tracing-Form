@@ -9,23 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
-
+using ZXing;
 
 namespace PNR_Contact_Tracing_Project
 {
-    public partial class Form4 : Form
+    public partial class Form5 : Form
     {
-        public Form4()
+        public Form5()
         {
             InitializeComponent();
         }
 
-        private void Form4_Load(object sender, EventArgs e)
+        private void Form5_FormClosed(object sender, FormClosedEventArgs e)
         {
-         
+            Application.Exit();
         }
 
-        private void Form4_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form5_Load(object sender, EventArgs e)
         {
 
         }

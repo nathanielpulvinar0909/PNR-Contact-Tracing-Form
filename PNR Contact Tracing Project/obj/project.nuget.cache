@@ -1,16 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "nBQRf7XpiG+T0nluc5Vs/wKPGv1M44O2x9BNXiBQvki5yZ5UEs0feSGaCxvmLb28MfggyDOjfwMuY9soaaAm5A==",
+  "dgSpecHash": "LhJWJeJre87Q+AzZnWBvABmfLQXVtRYvaepG6nWhjO8/mPJw5/kUHjgzE31TPPgsnDFUz8/Z+s+ZLUCUNINoIg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS DEMO\\source\\repos\\PNR Contact Tracing Project\\PNR Contact Tracing Project\\PNR Contact Tracing Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS DEMO\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
     "C:\\Users\\ASUS DEMO\\.nuget\\packages\\aforge.video\\2.2.5\\aforge.video.2.2.5.nupkg.sha512",
     "C:\\Users\\ASUS DEMO\\.nuget\\packages\\aforge.video.directshow\\2.2.5\\aforge.video.directshow.2.2.5.nupkg.sha512",
+    "C:\\Users\\ASUS DEMO\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ASUS DEMO\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS DEMO\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\ASUS DEMO\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\ASUS DEMO\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
-    "C:\\Users\\ASUS DEMO\\.nuget\\packages\\zxing.net\\0.16.8\\zxing.net.0.16.8.nupkg.sha512"
+    "C:\\Users\\ASUS DEMO\\.nuget\\packages\\zxing.net\\0.16.5\\zxing.net.0.16.5.nupkg.sha512"
   ],
   "logs": [
     {

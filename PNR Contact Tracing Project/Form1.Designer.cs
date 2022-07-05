@@ -126,6 +126,7 @@
             this.txtbxQRInformation = new System.Windows.Forms.TextBox();
             this.btnSaveQRInformation = new System.Windows.Forms.Button();
             this.lblAddTextHere = new System.Windows.Forms.Label();
+            this.lblInstructions = new System.Windows.Forms.Label();
             this.grpbxVaccinated.SuspendLayout();
             this.grpbxDose.SuspendLayout();
             this.grpbxSymptoms.SuspendLayout();
@@ -1243,9 +1244,9 @@
             // 
             this.btnGenerateQRCode.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnGenerateQRCode.Font = new System.Drawing.Font("HelveticaNeueLT Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnGenerateQRCode.Location = new System.Drawing.Point(1587, 177);
+            this.btnGenerateQRCode.Location = new System.Drawing.Point(1199, 174);
             this.btnGenerateQRCode.Name = "btnGenerateQRCode";
-            this.btnGenerateQRCode.Size = new System.Drawing.Size(228, 44);
+            this.btnGenerateQRCode.Size = new System.Drawing.Size(224, 44);
             this.btnGenerateQRCode.TabIndex = 90;
             this.btnGenerateQRCode.Text = "Generate QR Code";
             this.btnGenerateQRCode.UseVisualStyleBackColor = false;
@@ -1255,9 +1256,9 @@
             // 
             this.pctrbxQRCode.BackColor = System.Drawing.Color.White;
             this.pctrbxQRCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pctrbxQRCode.Location = new System.Drawing.Point(1199, 232);
+            this.pctrbxQRCode.Location = new System.Drawing.Point(1199, 245);
             this.pctrbxQRCode.Name = "pctrbxQRCode";
-            this.pctrbxQRCode.Size = new System.Drawing.Size(692, 574);
+            this.pctrbxQRCode.Size = new System.Drawing.Size(692, 561);
             this.pctrbxQRCode.TabIndex = 91;
             this.pctrbxQRCode.TabStop = false;
             // 
@@ -1274,7 +1275,7 @@
             // 
             this.btnSaveQRInformation.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnSaveQRInformation.Font = new System.Drawing.Font("HelveticaNeueLT Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSaveQRInformation.Location = new System.Drawing.Point(1353, 177);
+            this.btnSaveQRInformation.Location = new System.Drawing.Point(1429, 175);
             this.btnSaveQRInformation.Name = "btnSaveQRInformation";
             this.btnSaveQRInformation.Size = new System.Drawing.Size(228, 44);
             this.btnSaveQRInformation.TabIndex = 93;
@@ -1292,12 +1293,22 @@
             this.lblAddTextHere.TabIndex = 94;
             this.lblAddTextHere.Text = "Input your text here to generate your QR Code.";
             // 
+            // lblInstructions
+            // 
+            this.lblInstructions.AutoSize = true;
+            this.lblInstructions.Location = new System.Drawing.Point(1199, 221);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(460, 21);
+            this.lblInstructions.TabIndex = 95;
+            this.lblInstructions.Text = "Note: the QR Code Scanner is on the last commit; another project";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1924, 830);
+            this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.lblAddTextHere);
             this.Controls.Add(this.btnSaveQRInformation);
             this.Controls.Add(this.txtbxQRInformation);
@@ -1475,5 +1486,6 @@
         private TextBox txtbxQRInformation;
         private Button btnSaveQRInformation;
         private Label lblAddTextHere;
+        private Label lblInstructions;
     }
 }

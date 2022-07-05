@@ -1,6 +1,6 @@
 ﻿namespace PNR_Contact_Tracing_Project
 {
-    partial class Form4
+    partial class Form5
     {
         /// <summary>
         /// Required designer variable.
@@ -36,16 +36,16 @@
             // 
             this.timer1.Interval = 1000;
             // 
-            // Form4
+            // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form4";
+            this.ClientSize = new System.Drawing.Size(1093, 748);
+            this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QR Code Scanner";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form4_FormClosing);
-            this.Load += new System.EventHandler(this.Form4_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form5_FormClosed);
+            this.Load += new System.EventHandler(this.Form5_Load);
             this.ResumeLayout(false);
 
         }

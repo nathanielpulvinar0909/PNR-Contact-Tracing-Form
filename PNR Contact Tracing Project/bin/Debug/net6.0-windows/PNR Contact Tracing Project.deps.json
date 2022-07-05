@@ -8,11 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "PNR Contact Tracing Project/1.0.0": {
         "dependencies": {
-          "AForge": "2.2.5",
-          "AForge.Video": "2.2.5",
           "AForge.Video.DirectShow": "2.2.5",
           "QRCoder": "1.4.3",
-          "ZXing.Net": "0.16.8"
+          "ZXing.Net": "0.16.5"
         },
         "runtime": {
           "PNR Contact Tracing Project.dll": {}
@@ -48,7 +46,13 @@
           }
         }
       },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.Win32.SystemEvents/6.0.0": {},
+      "NETStandard.Library/2.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
       "QRCoder/1.4.3": {
         "dependencies": {
           "System.Drawing.Common": "6.0.0"
@@ -65,11 +69,14 @@
           "Microsoft.Win32.SystemEvents": "6.0.0"
         }
       },
-      "ZXing.Net/0.16.8": {
+      "ZXing.Net/0.16.5": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
         "runtime": {
-          "lib/net6.0/zxing.dll": {
-            "assemblyVersion": "0.16.8.0",
-            "fileVersion": "0.16.8.0"
+          "lib/netcoreapp3.0/zxing.dll": {
+            "assemblyVersion": "0.16.5.0",
+            "fileVersion": "0.16.5.0"
           }
         }
       }
@@ -102,12 +109,26 @@
       "path": "aforge.video.directshow/2.2.5",
       "hashPath": "aforge.video.directshow.2.2.5.nupkg.sha512"
     },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
     "Microsoft.Win32.SystemEvents/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "path": "netstandard.library/2.0.0",
+      "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
     },
     "QRCoder/1.4.3": {
       "type": "package",
@@ -123,12 +144,12 @@
       "path": "system.drawing.common/6.0.0",
       "hashPath": "system.drawing.common.6.0.0.nupkg.sha512"
     },
-    "ZXing.Net/0.16.8": {
+    "ZXing.Net/0.16.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Cbbe+x7I7E+VJ0VxU1fPc7AktIw/9xea/ZY/fh38sXqTQ75LJp9ooGUjpzFqfpPfIKozAoXgJ4yvY4GzKpPBzQ==",
-      "path": "zxing.net/0.16.8",
-      "hashPath": "zxing.net.0.16.8.nupkg.sha512"
+      "sha512": "sha512-FYZht7J1G8U3l7muiXl+OiBvJ7PkvsQKDgOhqUZe7/Sps7ys+ICWwLoYNygEOLPR476x8tJDB2we8V0a6bbz8A==",
+      "path": "zxing.net/0.16.5",
+      "hashPath": "zxing.net.0.16.5.nupkg.sha512"
     }
   }
 }

@@ -234,22 +234,15 @@ namespace PNR_Contact_Tracing_Project
                     // Introduction
 
                     // Personal Introduction
-                    file.WriteLine("Personal Information");
                     file.WriteLine("Full Name: " + txtbxFirstname.Text + " " + txtbxLastName.Text);
                     file.WriteLine("Address: " + txtbxAddress.Text);
                     file.WriteLine("Age and Sex: " + txtbxAge.Text + " years old and a " + txtbxSex.Text);
-                    file.WriteLine("Mobile # and Email Address: " + txtbxMobilenumber.Text + " and " + txtbxEmailaddress.Text);
-
+                   
                     // Health Information about Covid
-                    file.WriteLine("Health Information about Covid");
-                    file.WriteLine("Temperature: " + txtbxTemperature.Text + " Degrees");
-                    file.WriteLine("Vaccinated, Dose: " + vaccinated + " and " + dose);
-                    file.WriteLine("Had symptoms, contact, positive: " + symptoms + " , " + contact + " , " + positive);
                     file.WriteLine("Elligible to travel: " + eligibility);
 
                     // Travel Information
-                    file.WriteLine("Travel Information");
-                    file.WriteLine("Date you ride this train: " + this.datePicker.Text);
+                    file.WriteLine("Date: " + this.datePicker.Text);
                     file.WriteLine("Current Location: " + txtbxCurrentlocation.Text);
                     file.WriteLine("Desired Destination: " + txtbxDesiredDestination.Text);                    
 
@@ -657,10 +650,11 @@ namespace PNR_Contact_Tracing_Project
 
         }
 
-
-        
-
-
-
+        private void btnScanQRCode_Click(object sender, EventArgs e)
+        {
+            Form5 f5 = new Form5();
+            this.Hide();
+            f5.ShowDialog();
+        }
     }
 }

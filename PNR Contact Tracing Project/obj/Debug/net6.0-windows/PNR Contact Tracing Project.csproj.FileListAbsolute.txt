@@ -23,3 +23,4 @@ C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing 
 C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\bin\Debug\net6.0-windows\AForge.Video.DirectShow.dll
 C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\bin\Debug\net6.0-windows\zxing.dll
 C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR_Contact_Tracing_Project.Form4.resources
+C:\Users\ASUS DEMO\source\repos\PNR Contact Tracing Project\PNR Contact Tracing Project\obj\Debug\net6.0-windows\PNR_Contact_Tracing_Project.Form5.resources
